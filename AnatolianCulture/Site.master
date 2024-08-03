@@ -1,0 +1,113 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Site.master.cs" Inherits="SiteMaster" %>
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Anatolian Culture - <%: Page.Title %></title>
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="Content/font-awesome.min.css" rel="stylesheet" />
+    <link href="Content/CustomCss.css" rel="stylesheet" />
+    <link href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <script src="Scripts/bootstrap.bundle.min.js"></script>
+    <script src="Scripts/CustomJS.js"></script>
+    <script src="Scripts/jquery-3.7.1.min.js"></script>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+
+
+<body>
+    <form runat="server">
+        <asp:ScriptManager runat="server" EnablePageMethods="true">
+        </asp:ScriptManager>
+        <header>
+                        <!-- Navbar -->
+            <nav class="navbar navbar-expand-lg navbar-light fixed-top mask-custom shadow-0">
+                <div class="container">
+                    <a class="navbar-brand" href="#!"><span style="color: #81cfcb;">Anatolian</span><span style="color: #fff;">Culture</span></a>
+                    <button class="navbar-toggler" type="button" data-mdb-toggle="collapse"
+                        data-mdb-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <i class="fa fa-bars"></i>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="Default.aspx">Offer</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#!">Features</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#!">Portfolio</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#!">Reference</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#!">About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#!">Team</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#!">Contact</a>
+                            </li>
+                        </ul>
+                        <ul class="navbar-nav d-flex flex-row">
+                            <li class="nav-item me-3 me-lg-0">
+                                <a class="nav-link" href="#!">
+                                    <i class="fa fa-shopping-cart"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item me-3 me-lg-0">
+                                <a class="nav-link" href="#!">
+                                    <i class="fa fa-twitter"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item me-3 me-lg-0">
+                                <a class="nav-link" href="#!">
+                                    <i class="fa fa-instagram"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <!-- Navbar -->
+
+            <!--Section: Design Block-->
+ 
+            <!--Section: Design Block-->
+        </header>
+        <div >
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>
+            <hr />
+            <footer>
+                <p style="color: #5a5a5a">&copy; <%: DateTime.Now.Year %> - Copyright</p>
+            </footer>
+        </div>
+
+
+    </form>
+
+    <script>    
+        document.addEventListener("scroll", function () {
+            var navbar = document.querySelector(".navbar");
+            if (window.scrollY > 0) {
+                navbar.classList.remove("mask-custom");
+                navbar.classList.add("navbar-scrolled");
+            } else {
+                navbar.classList.add("mask-custom");
+                navbar.classList.remove("navbar-scrolled");
+            }
+        });
+
+    </script>
+</body>
+</html>
