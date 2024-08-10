@@ -7,15 +7,17 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Anatolian Culture - <%: Page.Title %></title>
+
     <link href="Content/bootstrap.min.css" rel="stylesheet" />
     <link href="Content/font-awesome.min.css" rel="stylesheet" />
     <link href="Content/CustomCss.css" rel="stylesheet" />
     <link href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
+
     <script src="Scripts/bootstrap.bundle.min.js"></script>
     <script src="Scripts/CustomJS.js"></script>
     <script src="Scripts/jquery-3.7.1.min.js"></script>
 
-    <asp:ContentPlaceHolder ID="head" runat="server">
+  <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
 
@@ -25,10 +27,10 @@
         <asp:ScriptManager runat="server" EnablePageMethods="true">
         </asp:ScriptManager>
         <header>
-                        <!-- Navbar -->
+            <!-- Navbar -->
             <nav class="navbar navbar-expand-lg navbar-light fixed-top mask-custom shadow-0">
                 <div class="container">
-                    <a class="navbar-brand" href="#!"><span style="color: #81cfcb;">Anatolian</span><span style="color: #fff;">Culture</span></a>
+                    <a class="navbar-brand" href="Home.aspx"><span style="color: #81cfcb;">Anatolian</span><span style="color: #fff;">Culture</span></a>
                     <button class="navbar-toggler" type="button" data-mdb-toggle="collapse"
                         data-mdb-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                         aria-label="Toggle navigation">
@@ -37,25 +39,25 @@
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav me-auto">
                             <li class="nav-item">
-                                <a class="nav-link" href="Default.aspx">Offer</a>
+                                <a class="nav-link" href="#!">İstanbul Turları</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#!">Features</a>
+                                <a class="nav-link" href="Tours.aspx">Yurtiçi Turlar</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#!">Portfolio</a>
+                                <a class="nav-link" href="#!">Yurtdışı Turlar</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#!">Reference</a>
+                                <a class="nav-link" href="#!">Online Seminerler</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#!">About</a>
+                                <a class="nav-link" href="#!">İnteraktif</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#!">Team</a>
+                                <a class="nav-link" href="#!">Hakkımızda</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#!">Contact</a>
+                                <a class="nav-link" href="#!">Blog</a>
                             </li>
                         </ul>
                         <ul class="navbar-nav d-flex flex-row">
@@ -78,15 +80,12 @@
                     </div>
                 </div>
             </nav>
-            <!-- Navbar -->
-
-            <!--Section: Design Block-->
- 
-            <!--Section: Design Block-->
         </header>
         <div >
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
+             
             </asp:ContentPlaceHolder>
+
             <hr />
             <footer>
                 <p style="color: #5a5a5a">&copy; <%: DateTime.Now.Year %> - Copyright</p>

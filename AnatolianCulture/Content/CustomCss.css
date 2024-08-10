@@ -1,20 +1,21 @@
 ﻿/* Color of the links BEFORE scroll */
-.navbar-scroll .nav-link,
-.navbar-scroll .navbar-toggler-icon,
-.navbar-scroll .navbar-brand {
-    color: #fff;
+.nav-link,
+.navbar-toggler-icon,
+.navbar-brand {
+    color: white;
 }
 
 /* Color of the links AFTER scroll */
 .navbar-scrolled .nav-link,
 .navbar-scrolled .navbar-toggler-icon,
 .navbar-scrolled .navbar-brand {
-    color: #fff;
+    color: white;
 }
 
 /* Color of the navbar AFTER scroll */
 .navbar-scroll,
 .navbar-scrolled {
+    transition: 0.3s ease;
     background-color: #0a0a09;
 }
 
@@ -28,3 +29,92 @@
     letter-spacing: 3px;
 }
 /*--------------------------------------------------------------*/
+:root {
+    --bs-teal: #20c997; /* Teal rengini burada tanımlayın */
+}
+
+.btn_teal {
+    --bs-btn-hover-bg: var(--bs-teal);
+    --bs-btn-hover-border-color: var(--bs-teal);
+}
+
+.card-hover-section .card-container {
+    display: flex;
+    gap: 1rem;
+}
+
+.card-hover-section .card {
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, flex 0.3s ease;
+    flex: 1;
+}
+
+    .card-hover-section .card:hover {
+        transform: scale(1.1);
+        z-index: 1;
+    }
+
+        .card-hover-section .card:hover ~ .card {
+            transform: scale(0.9);
+        }
+
+.card-hover-section .card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    padding: 0 10px 0 10px;
+}
+
+.card-hover-section .card:hover .card-overlay {
+    opacity: 1;
+}
+
+.card-hover-section .card img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.card-hover-section .card-body {
+    position: relative;
+    z-index: 1;
+}
+
+.card-hover-section .card-title {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .card-hover-section .card {
+        transform: none !important;
+        flex: none;
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+
+        .card-hover-section .card:hover {
+            transform: none !important;
+        }
+
+            .card-hover-section .card:hover ~ .card {
+                transform: none !important;
+            }
+}
