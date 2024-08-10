@@ -12,10 +12,12 @@
             width: 190px;
             height: 140px;
             border: 1px solid black;
-            background-color: #ffffff17;
+            background-color: #ffffff94;
             flex-wrap: wrap;
-            flex-direction: row;
+            flex-direction: column;
             transition: transform 0.3s ease;
+            align-items: center;
+            border-radius: 1rem;
         }
 
             .deneme:hover {
@@ -28,22 +30,36 @@
         <div id="intro" class="bg-image vh-100" style="background-image: url('Images/mardin.jpg'); display: flex; justify-content: center; flex-wrap: wrap;">
             <div class="mask" style="background-color: rgba(250, 182, 162, 0.15);"></div>
 
-            <div style="margin-top: 30vh; display: flex; align-items: center; flex-direction: column;">
-                <input class="form-control" type="search" name="name" value="" style="width: 300px;" placeholder="Nereye gitmek istersiniz?" />
+            <div style="margin-top: 35vh; display: flex; align-items: center; flex-direction: column; row-gap: 50px;">
+                <div style="display: grid; align-content: space-around; row-gap: 20px;">
+                    <h1>Yolculuk Nereye?</h1>
+                    <input class="form-control" type="search" name="name" value="" style="width: 300px;" placeholder="Nereye gitmek istersiniz?" />
+                </div>
 
                 <div style="margin-top: 40px; display: flex; width: auto; gap: 50px; justify-content: space-around; flex-wrap: wrap; padding: 0px 20px 0 20px;">
-                    <div class="deneme">123</div>
-                    <div class="deneme">123</div>
-                    <div class="deneme">123</div>
-                    <div class="deneme">123</div>
-
+                    <div class="deneme">
+                        <i class="bi bi-bootstrap-fill" style="font-size: 40px;"></i>
+                        <span>Çocuk</span>
+                    </div>
+                    <div class="deneme">
+                        <i class="bi bi-bootstrap-fill" style="font-size: 40px;"></i>
+                        <span>Doğa</span>
+                    </div>
+                    <div class="deneme">
+                        <i class="bi bi-bootstrap-fill" style="font-size: 40px;"></i>
+                        <span>Kültürel</span>
+                    </div>
+                    <div class="deneme">
+                        <i class="bi bi-bootstrap-fill" style="font-size: 40px;"></i>
+                        <span>Keyif</span>
+                    </div>
                 </div>
             </div>
         </div>
 
-        
+
     </section>
-   
+
     <section class="pt-5 pb-5">
         <div class="container">
             <div class="row">
@@ -165,12 +181,12 @@
         </div>
     </section>
 
-    <section  class="pt-5 pb-5 card-hover-section" style="background-color: #81CFCB;">
+    <section class="pt-5 pb-5 card-hover-section" style="background-color: #81CFCB;">
         <div class="container">
             <div class="row">
                 <div class="col-md-3 mb-3">
-                
-                    
+
+
                     <div class="card">
                         <img src="/Images/tur1.webp" class="card-img-top" alt="...">
                         <h4 class="card-title">Yurtiçi Turlar</h4>
