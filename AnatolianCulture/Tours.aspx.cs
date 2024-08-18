@@ -20,6 +20,7 @@ public partial class _Tours : System.Web.UI.Page
                 FilteredTours = tours.FindAll(t => t.TurType == tourType);
             }
         }
+
     }
     protected string GetPhotoPath(string photoName)
     {

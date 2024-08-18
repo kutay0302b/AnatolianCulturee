@@ -32,4 +32,29 @@ public class TourContentProvider
         }
         return tourContentList;
     }
+
+
+    public static List<TourDetail> GetTourDetails()
+    {
+        var tourDetailsList = new List<TourDetail>();
+        using (MySqlConnection conn = new MySqlConnection(Tools.GetConnStr()))
+        {
+            conn.Open();
+            var cmd = new MySqlCommand("SELECT * FROM anatolianculture.t_turdetails;", conn);
+            using (var reader = cmd.ExecuteReader())
+            {
+                while (reader.Read())
+                {
+                    var tourDetails = new TourDetail();
+                    tourDetails.ID = reader.GetInt32("ID");
+                    tourDetails.TurID = reader.GetInt32("TurID");
+                    tourDetails.TurIn = reader.GetString("TurIn");
+                    tourDetails.TurOut = reader.GetString("TurOut");
+
+                    tourDetailsList.Add(tourDetails);
+                }
+            }
+        }
+        return tourDetailsList;
+    }
 }

@@ -8,6 +8,7 @@ using System.Web.UI.WebControls;
 public partial class _TourDetails : System.Web.UI.Page
 {
     protected List<TourContent> FilteredContents { get; set; }
+    protected List<TourDetail> FilteredDetails { get; set; }
 
     protected void Page_Load(object sender, EventArgs e)
     {
@@ -18,6 +19,9 @@ public partial class _TourDetails : System.Web.UI.Page
             {
                 var tourContents = TourContentProvider.GetTourContents();
                 FilteredContents = tourContents.FindAll(t => t.TurID == turID);
+
+                var tourDetails = TourContentProvider.GetTourDetails();
+                FilteredDetails = tourDetails.FindAll(t => t.TurID == turID);
             }
         }
     }

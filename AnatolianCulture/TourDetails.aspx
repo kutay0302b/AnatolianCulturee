@@ -5,100 +5,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="Server">
 
     <style>
-        @media only screen and (min-width : 1224px) {
-            .tour-detail-main-container {
-                display: flex;
-                flex-wrap: wrap;
-            }
-
-            .detail-container {
-                display: flex;
-                justify-items: center;
-                align-content: center;
-                align-items: center;
-                width: 65%;
-                flex-direction: column;
-                justify-content: space-between;
-                height: auto;
-                padding-top: 20px;
-            }
-
-            .detail-content {
-                display: flex;
-                flex-direction: column;
-            }
-
-            .aside-content {
-                justify-items: center;
-                height: 60vh;
-                max-height: 60vh;
-                position: sticky;
-                top: 75px;
-                margin-top: 50px;
-                padding: 12px;
-                width: 25%;
-                border-radius: 1.5rem;
-                row-gap: 10px;
-                display: flex;
-                flex-direction: column;
-                justify-content: space-around;
-                background-color: #ffffff;
-                box-shadow: 0 0 8px 0px black;
-            }
-        }
-
-        .aside-content input {
-            background-color: #f9f9f9;
-        }
-
-
-
-        @media only screen and (max-width : 768px) {
-            .tour-detail-main-container {
-                display: flex;
-                flex-direction: column;
-                flex-wrap: wrap;
-            }
-
-            .aside-content {
-                height: 60vh;
-                border: 2px solid black;
-                padding: 2px;
-                width: auto;
-                align-content: space-evenly;
-            }
-
-                .aside-content input {
-                    background-color: #f9f9f9;
-                }
-        }
-
-
-        .services-list {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-            .services-list li {
-                display: flex;
-                align-items: center;
-                margin-bottom: 10px;
-                font-size: 1rem;
-            }
-
-                .services-list li .icon {
-                    font-size: 1rem;
-                    margin-right: 10px;
-                }
-
-                .services-list li.included .icon {
-                    color: #28a745; /* Yeşil Renk (Dahil olan hizmetler) */
-                }
-
-                .services-list li.excluded .icon {
-                    color: #dc3545; /* Kırmızı Renk (Dahil olmayan hizmetler) */
-                }
+    
 
         h4 {
             margin-top: 20px;
@@ -111,6 +18,7 @@
     <section style="background-color: #f9f9f9;">
         <div class="container-fluid tour-detail-main-container">
             <div class="detail-container">
+                <%--MAİN CONTENT--%>
                 <img src="Images/MARDIN-TURU-300x300.webp" class="card-img-top" alt="tur" style="width: 400px;">
                 <% if (FilteredContents != null && FilteredContents.Count > 0)
                     {
@@ -129,14 +37,15 @@
                     </div>
                 </div>
                 <% 
-                        dayCount++;
+                            dayCount++;
+                        }
                     }
-                }
-                else
-                { %>
+                    else
+                    { %>
                 <h1>Mevcut tur bulunmamaktadır. Takipte kalın!</h1>
                 <% } %>
 
+                <%--ÖDEME ALANI--%>
                 <div style="display: flex; gap: 2.8rem; margin-left: 17rem; margin-top: 10px; font-size: 20px;">
                     <div>
                         <label>NAKİT / BANKA HAVALESİ</label>
@@ -151,71 +60,49 @@
                     </div>
                 </div>
 
-
-
-
-                <div class=" mt-5">
+                <%--DAHİL OLAN İÇERİK--%>
+                <div class="mt-5">
                     <h4>Fiyata Dahil Olan Hizmetler</h4>
                     <ul class="services-list">
+                        <% if (FilteredDetails != null && FilteredDetails.Count > 0)
+                            {
+                                foreach (var content in FilteredDetails)
+                                {
+                                    var turInServices = content.TurIn.Split('|');
+                                    foreach (var service in turInServices)
+                                    { %>
                         <li class="included">
                             <span class="icon">✔</span>
-                            Özel aracımızla tüm transferler
+                            <%= service %>
                         </li>
-                        <li class="included">
-                            <span class="icon">✔</span>
-                            3 öğle ve 2 akşam yemeği (yöresel lezzetler)
-                        </li>
-                        <li class="included">
-                            <span class="icon">✔</span>
-                            Midyat – Mor Gabriel gezisi
-                        </li>
-                        <li class="included">
-                            <span class="icon">✔</span>
-                            Dara Antik Kenti gezisi
-                        </li>
-                        <li class="included">
-                            <span class="icon">✔</span>
-                            Mardin gezisi
-                        </li>
-                        <li class="included">
-                            <span class="icon">✔</span>
-                            Programda belirtilen tüm müze ve ören yeri giriş ücretleri
-                        </li>
-                        <li class="included">
-                            <span class="icon">✔</span>
-                            Tüm rehberlik hizmeti
-                        </li>
-                        <li class="included">
-                            <span class="icon">✔</span>
-                            Zorunlu seyahat sağlık sigortası
-                        </li>
-                        <li class="included">
-                            <span class="icon">✔</span>
-                            İzala Otel’de konaklama
-                        </li>
+                        <%         }
+                                }
+                            }
+                        %>
                     </ul>
 
                     <h4>Gezi Fiyatına Dahil Olmayan Hizmetler</h4>
                     <ul class="services-list">
+                        <% if (FilteredDetails != null && FilteredDetails.Count > 0)
+                            {
+                                foreach (var content in FilteredDetails)
+                                {
+                                    var turOutServices = content.TurOut.Split('|');
+                                    foreach (var service in turOutServices)
+                                    { %>
                         <li class="excluded">
                             <span class="icon">✘</span>
-                            Müze Kart
+                            <%= service %>
                         </li>
-                        <li class="excluded">
-                            <span class="icon">✘</span>
-                            Gidiş-Dönüş uçak biletleri
-                        </li>
-                        <li class="excluded">
-                            <span class="icon">✘</span>
-                            Yemekler sırasında alınacak tüm alkollü alkolsüz içkiler
-                        </li>
-                        <li class="excluded">
-                            <span class="icon">✘</span>
-                            Kişisel harcamalar
-                        </li>
+                        <%         }
+                                }
+                            }
+                        %>
                     </ul>
                 </div>
             </div>
+
+            <%--YAN PANEL--%>
             <aside class="aside-content">
                 <h5>Bizimle iletişime geçebilirsiniz</h5>
                 <div>
@@ -239,12 +126,7 @@
 
                     <button class="btn btn-success btn_teal">Gönder</button>
                 </div>
-
-
             </aside>
-
-
-
         </div>
     </section>
 
