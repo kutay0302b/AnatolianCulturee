@@ -52,7 +52,7 @@ public class TourContentProvider
                     tourDetails.TurID = reader.GetInt32("TurID");
                     tourDetails.TurIn = reader.GetString("TurIn");
                     tourDetails.TurOut = reader.GetString("TurOut");
-                    tourContent.TurType = reader.GetInt32("TurType");
+                    tourDetails.TurType = reader.GetInt32("TurType");
 
                     tourDetailsList.Add(tourDetails);
                 }
