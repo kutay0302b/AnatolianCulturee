@@ -24,7 +24,9 @@ public class TourContentProvider
                     tourContent.ID = reader.GetInt32("ID");
                     tourContent.TurID = reader.GetInt32("TurID");
                     tourContent.TurContentBaslik = reader.GetString("TurContentBaslik");
-                    tourContent.TurContent = reader.GetString("TurContent");          
+                    tourContent.TurContent = reader.GetString("TurContent");
+                    tourContent.TurType = reader.GetInt32("TurType");
+
 
                     tourContentList.Add(tourContent);
                 }
@@ -50,6 +52,7 @@ public class TourContentProvider
                     tourDetails.TurID = reader.GetInt32("TurID");
                     tourDetails.TurIn = reader.GetString("TurIn");
                     tourDetails.TurOut = reader.GetString("TurOut");
+                    tourContent.TurType = reader.GetInt32("TurType");
 
                     tourDetailsList.Add(tourDetails);
                 }

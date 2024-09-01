@@ -12,4 +12,6 @@ public class TourDetail
     public int TurID { get; set; }
     public string TurIn { get; set; }
     public string TurOut { get; set; }
+    public int TurType { get; set; }
+
 }

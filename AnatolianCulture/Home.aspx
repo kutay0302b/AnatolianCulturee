@@ -23,6 +23,10 @@
             .deneme:hover {
                 transform: scale(1.3);
             }
+
+        #intro img {
+            width: 40%
+        }
     </style>
 
     <section>
@@ -33,24 +37,26 @@
             <div style="margin-top: 35vh; display: flex; align-items: center; flex-direction: column; row-gap: 50px;">
                 <div style="display: grid; align-content: space-around; row-gap: 20px;">
                     <h1>Yolculuk Nereye?</h1>
-                    <input class="form-control" type="search" name="name" value="" style="width: 300px;" placeholder="Nereye gitmek istersiniz?" />
+                    <input class="form-control" id="nameSearch" runat="server" type="search" name="name" value="" placeholder="Nereye gitmek istersiniz?" />
+
+
                 </div>
 
                 <div style="margin-top: 40px; display: flex; width: auto; gap: 50px; justify-content: space-around; flex-wrap: wrap; padding: 0px 20px 0 20px;">
                     <div class="deneme">
-                        <i class="bi bi-bootstrap-fill" style="font-size: 40px;"></i>
+                        <img src="Images/family.png" />
                         <span>Çocuk</span>
                     </div>
                     <div class="deneme">
-                        <i class="bi bi-bootstrap-fill" style="font-size: 40px;"></i>
+                        <img src="Images/nature.png" />
                         <span>Doğa</span>
                     </div>
                     <div class="deneme">
-                        <i class="bi bi-bootstrap-fill" style="font-size: 40px;"></i>
+                        <img src="Images/theatre.png" />
                         <span>Kültürel</span>
                     </div>
                     <div class="deneme">
-                        <i class="bi bi-bootstrap-fill" style="font-size: 40px;"></i>
+                        <img src="Images/disco.png" />
                         <span>Keyif</span>
                     </div>
                 </div>
@@ -236,9 +242,33 @@
         </div>
     </section>
 
-    <script>
+    <script type="text/javascript">
         function redirectToTour(buttonId) {
             window.location.href = "Tours.aspx?tourtype=" + buttonId;
         }
+
+
+
+        $(function () {
+            $("#<%= nameSearch.ClientID %>").autocomplete({
+                source: function (request, response) {
+                    $.ajax({
+                        url: '<%= ResolveUrl("~/SearchSuggestions.ashx") %>',
+                    type: "GET",
+                    dataType: "json",
+                    data: { term: request.term },
+                    success: function (data) {
+                        response(data);
+                    }
+                });
+                },
+                minLength: 2,
+                select: function (event, ui) {
+                    window.location.href = "/TourDetails.aspx?tour=" + ui.item.value;
+                }
+            });
+        });
+
+
     </script>
 </asp:Content>

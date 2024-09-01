@@ -15,13 +15,16 @@ public partial class _TourDetails : System.Web.UI.Page
         if (!IsPostBack)
         {
             int turID = 0;
-            if (int.TryParse(Request.QueryString["tour"], out turID))
+            int turType = 0;
+
+            if (int.TryParse(Request.QueryString["tour"], out turID) && int.TryParse(Request.QueryString["type"], out turType))
             {
                 var tourContents = TourContentProvider.GetTourContents();
-                FilteredContents = tourContents.FindAll(t => t.TurID == turID);
+                FilteredContents = tourContents.FindAll(t => t.TurID == turID && t.TurType == turType);
 
                 var tourDetails = TourContentProvider.GetTourDetails();
-                FilteredDetails = tourDetails.FindAll(t => t.TurID == turID);
+                FilteredDetails = tourDetails.FindAll(t => t.TurID == turID && t.TurType == turType);
+
             }
         }
     }

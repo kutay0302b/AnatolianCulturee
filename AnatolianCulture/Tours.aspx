@@ -109,7 +109,7 @@
                     <h6 class="card-subtitle mb-2">Yurtiçi Turlar</h6>
                     <p class="card-text"><%= tour.TurAcıklama %></p>
                     <p class="price"><%= tour.TurFiyat %> TL</p>
-                    <a href="#" class="btn btn-custom" onclick="redirectToDetails(<%= buttonId %>)">Detaylar</a>
+                <a href="#" class="btn btn-custom" onclick="redirectToDetails(<%= tour.ID %>, <%= tour.TurType %>)">Detaylar</a>
                 </div>
             </div>
 
@@ -125,8 +125,8 @@
     </section>
 
     <script>
-        function redirectToDetails(buttonId) {
-            window.location.href = "TourDetails.aspx?tour=" + buttonId;
+        function redirectToDetails(tourId, tourType) {
+            window.location.href = "TourDetails.aspx?tour=" + tourId + "&type=" + tourType;
         }
     </script>
 </asp:Content>

@@ -11,13 +11,15 @@
     <link href="Content/bootstrap.min.css" rel="stylesheet" />
     <link href="Content/font-awesome.min.css" rel="stylesheet" />
     <link href="Content/CustomCss.css" rel="stylesheet" />
+    <link href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" rel="stylesheet">
+
     <link href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <script src="Scripts/bootstrap.bundle.min.js"></script>
     <script src="Scripts/CustomJS.js"></script>
     <script src="Scripts/jquery-3.7.1.min.js"></script>
-
-  <asp:ContentPlaceHolder ID="head" runat="server">
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
 
@@ -39,19 +41,19 @@
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav me-auto">
                             <li class="nav-item">
-                                <a class="nav-link" href="#!">İstanbul Turları</a>
+                                <a class="nav-link" href="#!" onclick="redirectToTour(4)">İstanbul Turları</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="Tours.aspx">Yurtiçi Turlar</a>
+                                <a class="nav-link" href="#" onclick="redirectToTour(1)">Yurtiçi Turlar</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#!">Yurtdışı Turlar</a>
+                                <a class="nav-link" href="#!" onclick="redirectToTour(2)">Yurtdışı Turlar</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#!">Online Seminerler</a>
+                                <a class="nav-link" href="#!" onclick="redirectToTour(3)">Online Seminerler</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#!">İnteraktif</a>
+                                <a class="nav-link" href="#!" onclick="redirectToTour(5)">İnteraktif</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#!">Hakkımızda</a>
@@ -81,9 +83,8 @@
                 </div>
             </nav>
         </header>
-        <div >
+        <div>
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
-             
             </asp:ContentPlaceHolder>
 
             <hr />
@@ -106,6 +107,12 @@
                 navbar.classList.remove("navbar-scrolled");
             }
         });
+
+
+        function redirectToTour(buttonId) {
+            window.location.href = "Tours.aspx?tourtype=" + buttonId;
+        }
+
 
     </script>
 </body>

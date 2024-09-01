@@ -12,5 +12,6 @@ public class TourContent
     public int TurID { get; set; }
     public string TurContentBaslik { get; set; }
     public string TurContent { get; set; }
+    public int TurType { get; set; }
    
 }
