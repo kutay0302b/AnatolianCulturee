@@ -26,7 +26,7 @@ public class TourProvider
                     tour.TurName = reader.GetString("TurName");
                     tour.TurFiyat = reader.GetInt32("TurFiyat");
                     tour.TurType = reader.GetInt32("TurType");
-                    tour.TurAcıklama = reader.GetString("TurAcıklama");
+                    tour.TurAciklama = reader.GetString("TurAciklama");
                     tour.TurPhoto = reader.GetString("TurPhoto");
 
 
@@ -55,7 +55,7 @@ public class TourProvider
                     tour.TurName = reader.GetString("TurName");
                     tour.TurFiyat = reader.GetInt32("TurFiyat");
                     tour.TurType = reader.GetInt32("TurType");
-                    tour.TurAcıklama = reader.GetString("TurAcıklama");
+                    tour.TurAciklama = reader.GetString("TurAciklama");
                     tour.TurPhoto = reader.GetString("TurPhoto");
 
                     tourList.Add(tour);

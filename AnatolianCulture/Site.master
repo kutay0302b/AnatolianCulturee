@@ -35,7 +35,7 @@
                     <a class="navbar-brand" href="Home.aspx"><span style="color: #81cfcb;">Anatolian</span><span style="color: #fff;">Culture</span></a>
                     <button class="navbar-toggler" type="button" data-mdb-toggle="collapse"
                         data-mdb-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                        aria-label="Toggle navigation">
+                        aria-label="Toggle navigation" style="border-color: white;">
                         <i class="fa fa-bars"></i>
                     </button>
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -113,6 +113,12 @@
             window.location.href = "Tours.aspx?tourtype=" + buttonId;
         }
 
+        $(document).ready(function () {
+            $(".navbar-toggler").on("click", function () {
+                var target = $(this).data("mdb-target") || $(this).data("bs-target");
+                $(target).toggleClass("show");
+            });
+        });
 
     </script>
 </body>

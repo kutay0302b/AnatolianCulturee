@@ -5,7 +5,7 @@
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     <style>
-        .deneme {
+        /* .deneme {
             display: flex;
             justify-content: center;
             align-content: center;
@@ -27,6 +27,17 @@
         #intro img {
             width: 40%
         }
+
+
+        .header-search {
+            margin-top: 35vh;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            row-gap: 50px;
+        }*/
+
+
     </style>
 
     <%--header--%>
@@ -34,12 +45,12 @@
         <div id="intro" class="bg-image vh-100" style="background-image: url('Images/mardin.jpg'); display: flex; justify-content: center; flex-wrap: wrap;">
             <div class="mask" style="background-color: rgba(250, 182, 162, 0.15);"></div>
 
-            <div style="margin-top: 35vh; display: flex; align-items: center; flex-direction: column; row-gap: 50px;">
+            <div class="header-search">
                 <div style="display: grid; align-content: space-around; row-gap: 20px;">
                     <h1>Yolculuk Nereye?</h1>
                     <input class="form-control" id="nameSearch" runat="server" type="search" name="name" value="" placeholder="Nereye gitmek istersiniz?" />
                 </div>
-                <div style="margin-top: 40px; display: flex; width: auto; gap: 50px; justify-content: space-around; flex-wrap: wrap; padding: 0px 20px 0 20px;">
+                <div class="header-serach-box">
                     <div class="deneme">
                         <img src="Images/family.png" />
                         <span>Çocuk</span>
@@ -60,7 +71,7 @@
             </div>
         </div>
     </section>
- 
+
     <%--hizmetlerimiz--%>
     <section class="pt-5 pb-5">
         <div class="container">
@@ -151,7 +162,7 @@
         </div>
     </section>
 
-   <%--turlar--%>
+    <%--turlar--%>
     <section class="pt-5 pb-5 card-hover-section" style="background-color: #81CFCB;">
         <div class="container">
             <div class="row">
@@ -159,7 +170,7 @@
 
 
                     <div class="card">
-                        <img src="Images/tur1.webp" class="card-img-top" alt="...">
+                        <img src="Images/tur1.webp" class="card-img-top" alt="Yurtiçi Turlar">
                         <h4 class="card-title">Yurtiçi Turlar</h4>
                         <div class="card-overlay">
                             <h4 class="card-title">Yurtiçi Turlar</h4>
@@ -172,10 +183,10 @@
                 </div>
                 <div class="col-md-3 mb-3">
                     <div class="card">
-                        <img src="Images/tur2.webp" class="card-img-top" alt="...">
+                        <img src="Images/tur2.webp" class="card-img-top" alt="Yurtdışı Turlar">
                         <h4 class="card-title">Yurtdışı Turlar</h4>
                         <div class="card-overlay">
-                            <h4 class="card-title">Packages</h4>
+                            <h4 class="card-title">Yurtdışı Turlar</h4>
                             <p>14 – 17 Kasım Ata Topraklarına Yolculuk: Balkanlara Doğru</p>
                             <a href="#" class="btn btn-light btn_teal" onclick="redirectToTour(2)">Detaylar</a>
                         </div>
@@ -183,7 +194,7 @@
                 </div>
                 <div class="col-md-3 mb-3">
                     <div class="card">
-                        <img src="Images/tur3.webp" class="card-img-top" alt="...">
+                        <img src="Images/tur3.webp" class="card-img-top" alt="İstanbul Turları">
                         <h4 class="card-title">İstanbul Turları</h4>
                         <div class="card-overlay">
                             <h4 class="card-title">İstanbul Turları</h4>
@@ -194,7 +205,7 @@
                 </div>
                 <div class="col-md-3 mb-3">
                     <div class="card">
-                        <img src="Images/tur4.webp" class="card-img-top" alt="...">
+                        <img src="Images/tur4.webp" class="card-img-top" alt="İnteraktif" style="height: 456px;">
                         <h4 class="card-title">İnteraktif</h4>
                         <div class="card-overlay">
                             <h4 class="card-title">İnteraktif</h4>

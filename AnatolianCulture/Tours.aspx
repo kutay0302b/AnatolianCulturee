@@ -23,7 +23,7 @@
             .card-custom img {
                 border-bottom: 1px solid #e0e0e0;
                 width: 100%;
-                height: auto;
+                height: 270px;
             }
 
             .card-custom .card-body {
@@ -107,7 +107,7 @@
                 <div class="card-body">
                     <h5 class="card-title"><%= tour.TurName %></h5>
                     <h6 class="card-subtitle mb-2">Yurtiçi Turlar</h6>
-                    <p class="card-text"><%= tour.TurAcıklama %></p>
+                    <p class="card-text"><%= tour.TurAciklama %></p>
                     <p class="price"><%= tour.TurFiyat %> TL</p>
                 <a href="#" class="btn btn-custom" onclick="redirectToDetails(<%= tour.ID %>, <%= tour.TurType %>)">Detaylar</a>
                 </div>

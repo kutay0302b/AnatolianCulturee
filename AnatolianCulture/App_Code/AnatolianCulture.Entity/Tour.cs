@@ -12,6 +12,6 @@ public class Tour
     public string TurName { get; set; }
     public int TurFiyat { get; set; }
     public int TurType { get; set; }
-    public string TurAcıklama { get; set; }
+    public string TurAciklama { get; set; }
     public string TurPhoto { get; set; }
 }

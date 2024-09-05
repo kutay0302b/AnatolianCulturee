@@ -5,7 +5,8 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="Server">
 
     <style>
-    
+   
+
 
         h4 {
             margin-top: 20px;
@@ -19,34 +20,37 @@
         <div class="container-fluid tour-detail-main-container">
             <div class="detail-container">
                 <%--MAİN CONTENT--%>
-                <img src="Images/MARDIN-TURU-300x300.webp" class="card-img-top" alt="tur" style="width: 400px;">
-                <% if (FilteredContents != null && FilteredContents.Count > 0)
-                    {
-                        int dayCount = 1;
-                        foreach (var content in FilteredContents)
-                        { %>
-                <div class="detail-content">
-                    <div style="width: 50%; margin-left: 320px;">
-                        <h6><%= dayCount %>. gün</h6>
-                        <h6><%= content.TurContentBaslik %></h6>
+                <img src="Images/MARDIN-TURU-300x300.webp" class="card-img-top" alt="tur">
+                <div class="detail-container-main">
+                    <% if (FilteredContents != null && FilteredContents.Count > 0)
+                        {
+                            int dayCount = 1;
+                            foreach (var content in FilteredContents)
+                            { %>
+                    <div class="detail-content">
+                        <%--   <div style="width: 50%; margin-left: 320px;">--%>
+                        <div>
+                            <h6><%= dayCount %>. gün</h6>
+                            <h6><%= content.TurContentBaslik %></h6>
+                        </div>
+                        <%-- <div class="container-fluid" style="width: 50%;">--%>
+                        <div>
+                            <p>
+                                <%= content.TurContent %>
+                            </p>
+                        </div>
                     </div>
-                    <div class="container-fluid" style="width: 50%;">
-                        <p>
-                            <%= content.TurContent %>
-                        </p>
-                    </div>
-                </div>
-                <% 
-                            dayCount++;
+                    <% 
+                                dayCount++;
+                            }
                         }
-                    }
-                    else
-                    { %>
-                <h1>Mevcut tur bulunmamaktadır. Takipte kalın!</h1>
-                <% } %>
-
+                        else
+                        { %>
+                    <h1>Mevcut tur bulunmamaktadır. Takipte kalın!</h1>
+                    <% } %>
+                </div>
                 <%--ÖDEME ALANI--%>
-                <div style="display: flex; gap: 2.8rem; margin-left: 17rem; margin-top: 10px; font-size: 20px;">
+                <div class="detail-payment">
                     <div>
                         <label>NAKİT / BANKA HAVALESİ</label>
                     </div>
