@@ -12,13 +12,21 @@
     <link href="Content/font-awesome.min.css" rel="stylesheet" />
     <link href="Content/CustomCss.css" rel="stylesheet" />
     <link href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" rel="stylesheet">
+    <link href="Content/owl.theme.default.min.css" rel="stylesheet" />
+    <link href="Content/owl.carousel.min.css" rel="stylesheet" />
+    <link href="Content/animate.css" rel="stylesheet" />
+    <link href="Content/style.css" rel="stylesheet" />
+
+
 
     <link href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <script src="Scripts/bootstrap.bundle.min.js"></script>
     <script src="Scripts/CustomJS.js"></script>
+    <script src="Scripts/popper.js"></script>
     <script src="Scripts/jquery-3.7.1.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <script src="Scripts/owl.carousel.min.js"></script>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
@@ -32,7 +40,7 @@
             <!-- Navbar -->
             <nav class="navbar navbar-expand-lg navbar-light fixed-top mask-custom shadow-0">
                 <div class="container">
-                    <a class="navbar-brand" href="Home.aspx"><span style="color: #81cfcb;">Anatolian</span><span style="color: #fff;">Culture</span></a>
+                    <a class="navbar-brand" href="Home.aspx" style="margin-right: 60px;"><span style="color: #81cfcb;">Anatolian</span><span style="color: #fff;">Culture</span></a>
                     <button class="navbar-toggler" type="button" data-mdb-toggle="collapse"
                         data-mdb-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                         aria-label="Toggle navigation" style="border-color: white;">

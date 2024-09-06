@@ -36,8 +36,6 @@
             flex-direction: column;
             row-gap: 50px;
         }*/
-
-
     </style>
 
     <%--header--%>
@@ -73,7 +71,7 @@
     </section>
 
     <%--hizmetlerimiz--%>
-    <section class="pt-5 pb-5">
+    <section class="pt-5 pb-5" style="min-height: 604px;">
         <div class="container">
             <div class="row">
                 <div class="col-6">
@@ -162,6 +160,67 @@
         </div>
     </section>
 
+    <section class="ftco-section" style="height: 66vh; background-color: #292727; padding-top: 61px;">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="slider-hero">
+                        <div class="featured-carousel owl-carousel">
+                            <div class="item">
+                                <div class="work">
+                                    <div class="img d-flex align-items-center justify-content-center" style="background-image: url('Images/slider-1.jpg'); height: 400px;">
+                                        <div class="text text-center">
+                                            <h2>Discover New Places</h2>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="work">
+                                    <div class="img d-flex align-items-center justify-content-center" style="background-image: url('Images/slider-2.jpg'); height: 400px;">
+                                        <div class="text text-center">
+                                            <h2>Dream Destination</h2>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="work">
+                                    <div class="img d-flex align-items-center justify-content-center" style="background-image: url('Images/slider-3.jpg'); height: 400px;">
+                                        <div class="text text-center">
+                                            <h2>Travel Exploration</h2>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="my-5 text-center">
+                            <ul class="thumbnail list-unstyled d-flex justify-content-center">
+                                <li class="active img me-2">
+                                    <a href="#">
+                                        <img src="Images/thumb-1.jpg" alt="Image" class="img-fluid rounded">
+                                    </a>
+                                </li>
+                                <li class="me-2">
+                                    <a href="#">
+                                        <img src="Images/thumb-2.jpg" alt="Image" class="img-fluid rounded">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="Images/thumb-3.jpg" alt="Image" class="img-fluid rounded">
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
     <%--turlar--%>
     <section class="pt-5 pb-5 card-hover-section" style="background-color: #81CFCB;">
         <div class="container">
@@ -246,6 +305,48 @@
             });
         });
 
+        (function ($) {
 
+            "use strict";
+
+            var fullHeight = function () {
+
+                $('.js-fullheight').css('height', $(window).height());
+                $(window).resize(function () {
+                    $('.js-fullheight').css('height', $(window).height());
+                });
+
+            };
+            fullHeight();
+
+            var owl = $('.featured-carousel');
+
+            $('.featured-carousel').owlCarousel({
+                animateOut: 'fadeOut',
+                center: false,
+                items: 1,
+                loop: true,
+                stagePadding: 0,
+                margin: 0,
+                smartSpeed: 1500,
+                autoplay: false,
+                dots: false,
+                nav: false,
+                navText: ['<span class="icon-keyboard_arrow_left">', '<span class="icon-keyboard_arrow_right">']
+            });
+
+            $('.thumbnail li').each(function (slide_index) {
+                $(this).click(function (e) {
+                    owl.trigger('to.owl.carousel', [slide_index, 1500]);
+                    e.preventDefault();
+                })
+            })
+
+            owl.on('changed.owl.carousel', function (event) {
+                $('.thumbnail li').removeClass('active');
+                $('.thumbnail li').eq(event.item.index - 2).addClass('active');
+            })
+
+        })(jQuery);
     </script>
 </asp:Content>
