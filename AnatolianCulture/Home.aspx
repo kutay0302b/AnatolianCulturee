@@ -65,7 +65,7 @@
 
     <%--header--%>
     <section>
-        <div id="intro" class="bg-image vh-100" style="background-image: url('Images/mardin.jpg'); display: flex; justify-content: center; flex-wrap: wrap;">
+        <div id="intro" class="bg-image vh-100" style="background-image: url('Images/mardin.jpg'); display: flex; justify-content: center; flex-wrap: wrap; background-attachment: fixed; position: relative;">
             <div class="mask" style="background-color: rgba(250, 182, 162, 0.15);"></div>
 
             <div class="header-search">
@@ -190,10 +190,10 @@
         <div class="swiper-container">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
-              <img src="Images/slider-1.jpg" />
+                    <img src="Images/slider-1.jpg" />
                 </div>
                 <div class="swiper-slide">
-               <img src="Images/slider-2.jpg" />
+                    <img src="Images/slider-2.jpg" />
                 </div>
                 <div class="swiper-slide">
                     <img src="Images/slider-3.jpg" />
@@ -333,7 +333,7 @@
             loop: true,             // Sonsuz döngü
             autoplay: {
                 delay: 3000,          // 3 saniyede bir kaydırma
-               disableOnInteraction: false, // Kullanıcı müdahale ettiğinde durmasın
+                disableOnInteraction: false, // Kullanıcı müdahale ettiğinde durmasın
             },
         });
 
@@ -356,10 +356,13 @@
                 },
                 minLength: 2,
                 select: function (event, ui) {
-                    window.location.href = "/TourDetails.aspx?tour=" + ui.item.value;
+                    window.location.href = "/TourDetails.aspx?tour=" + ui.item.value + "&type=" + ui.item.type;
                 }
             });
         });
+
+
+
 
         (function ($) {
 

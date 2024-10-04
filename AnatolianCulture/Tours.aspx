@@ -5,12 +5,11 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="Server">
     <style>
         .card-custom {
-            border: 1px solid #e0e0e0;
+            border: 1px solid #212529;
             border-radius: 8px;
             overflow: hidden;
             width: 100%;
             max-width: 300px;
-            box-shadow: 0px 0px 10px 0px #212529;
             transition: transform 0.2s ease-in-out;
             margin: 15px;
         }
@@ -109,7 +108,7 @@
                     <h6 class="card-subtitle mb-2">Yurtiçi Turlar</h6>
                     <p class="card-text"><%= tour.TurAciklama %></p>
                     <p class="price"><%= tour.TurFiyat %> TL</p>
-                <a href="#" class="btn btn-custom" onclick="redirectToDetails(<%= tour.ID %>, <%= tour.TurType %>)">Detaylar</a>
+                    <a href="#" class="btn btn-custom" onclick="redirectToDetails(<%= tour.ID %>, <%= tour.TurType %>)">Detaylar</a>
                 </div>
             </div>
 

@@ -18,7 +18,8 @@ public class SearchSuggestions : IHttpHandler
             suggestions.Add(new
             {
                 label = tour.TurName,
-                value = tour.ID
+                value = tour.ID,
+                type = tour.TurType
             });
         }
 
