@@ -36,6 +36,31 @@
             flex-direction: column;
             row-gap: 50px;
         }*/
+
+        .section-swip {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden; /* Taşan içerikleri gizle */
+        }
+
+        .swiper-container {
+            width: 100%; /* Genişliği sayfanın tamamını kapsayacak şekilde ayarla */
+            height: 100vh; /* Tam ekran yüksekliğinde */
+        }
+
+        .swiper-slide {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+            .swiper-slide img {
+                width: 100%;
+                height: 100%; /* Yükseklik tam dolu olacak */
+                object-fit: cover; /* Görüntüyü kırpmadan içeri sığdır */
+            }
     </style>
 
     <%--header--%>
@@ -160,7 +185,25 @@
         </div>
     </section>
 
-    <section class="ftco-section" style="height: 66vh; background-color: #292727; padding-top: 61px;">
+    <section class="section-swip">
+        <!-- Swiper Container -->
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+              <img src="Images/slider-1.jpg" />
+                </div>
+                <div class="swiper-slide">
+               <img src="Images/slider-2.jpg" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="Images/slider-3.jpg" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <%--    <section class="ftco-section" style="height: 66vh; background-color: #292727; padding-top: 61px;">
         <div class="container">
             <div class="row">
                 <div class="col-12">
@@ -218,7 +261,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section>--%>
 
 
     <%--turlar--%>
@@ -282,6 +325,19 @@
         function redirectToTour(buttonId) {
             window.location.href = "Tours.aspx?tourtype=" + buttonId;
         }
+
+
+
+        var swiper = new Swiper('.swiper-container', {
+            direction: 'vertical',  // Dikey kaydırma
+            loop: true,             // Sonsuz döngü
+            autoplay: {
+                delay: 3000,          // 3 saniyede bir kaydırma
+               disableOnInteraction: false, // Kullanıcı müdahale ettiğinde durmasın
+            },
+        });
+
+
 
 
 
