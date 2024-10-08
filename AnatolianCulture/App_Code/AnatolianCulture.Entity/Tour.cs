@@ -14,4 +14,6 @@ public class Tour
     public int TurType { get; set; }
     public string TurAciklama { get; set; }
     public string TurPhoto { get; set; }
+    public DateTime TurBasTarih { get; set; }
+    public DateTime TurBitTarih { get; set; }
 }

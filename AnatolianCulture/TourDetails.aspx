@@ -5,9 +5,6 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="Server">
 
     <style>
-   
-
-
         h4 {
             margin-top: 20px;
             margin-bottom: 10px;
@@ -16,9 +13,9 @@
         }
     </style>
     <section style="height: 69px; background: #0a0a09;"></section>
-    <section style="background-color: #f9f9f9;">
+    <section class="pb-5" style="background-color: #f9f9f9;">
         <div class="container-fluid tour-detail-main-container">
-            <div class="detail-container">
+            <div class="detail-container ">
                 <%--MAİN CONTENT--%>
                 <img src="Images/MARDIN-TURU-300x300.webp" class="card-img-top" alt="tur">
                 <div class="detail-container-main">
@@ -133,9 +130,5 @@
             </aside>
         </div>
     </section>
-
-
-    <div style="height: 1500px; background-color: #f9f9f9;">
-    </div>
 </asp:Content>
 

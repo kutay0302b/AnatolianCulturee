@@ -5,67 +5,23 @@
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     <style>
-        /* .deneme {
+        .deneme a {
             display: flex;
-            justify-content: center;
-            align-content: center;
-            width: 190px;
-            height: 140px;
-            border: 1px solid black;
-            background-color: #ffffff94;
+            flex-direction: column;
             flex-wrap: wrap;
-            flex-direction: column;
-            transition: transform 0.3s ease;
-            align-items: center;
-            border-radius: 1rem;
-        }
-
-            .deneme:hover {
-                transform: scale(1.3);
-            }
-
-        #intro img {
-            width: 40%
-        }
-
-
-        .header-search {
-            margin-top: 35vh;
-            display: flex;
-            align-items: center;
-            flex-direction: column;
-            row-gap: 50px;
-        }*/
-
-        .section-swip {
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            overflow: hidden; /* Taşan içerikleri gizle */
-        }
-
-        .swiper-container {
-            width: 100%; /* Genişliği sayfanın tamamını kapsayacak şekilde ayarla */
-            height: 100vh; /* Tam ekran yüksekliğinde */
-        }
-
-        .swiper-slide {
-            display: flex;
+            align-content: center;
             justify-content: center;
             align-items: center;
+            color: black;
+            text-decoration: none;
         }
 
-            .swiper-slide img {
-                width: 100%;
-                height: 100%; /* Yükseklik tam dolu olacak */
-                object-fit: cover; /* Görüntüyü kırpmadan içeri sığdır */
-            }
+      
     </style>
 
     <%--header--%>
     <section>
-        <div id="intro" class="bg-image vh-100" style="background-image: url('Images/mardin.jpg'); display: flex; justify-content: center; flex-wrap: wrap; background-attachment: fixed; position: relative;">
+        <div id="intro" class="bg-image vh-100 parallax" style="background-image: url('Images/mardin.jpg'); display: flex; justify-content: center; flex-wrap: wrap; background-attachment: fixed; position: relative;">
             <div class="mask" style="background-color: rgba(250, 182, 162, 0.15);"></div>
 
             <div class="header-search">
@@ -75,24 +31,34 @@
                 </div>
                 <div class="header-serach-box">
                     <div class="deneme">
-                        <img src="Images/family.png" />
-                        <span>Çocuk</span>
+                        <a href="Tours.aspx?child=1">
+                            <img src="Images/family.png" />
+                            <span>Çocuk</span>
+                        </a>
                     </div>
                     <div class="deneme">
-                        <img src="Images/nature.png" />
-                        <span>Doğa</span>
+                        <a href="Tours.aspx?nature=1">
+                            <img src="Images/nature.png" />
+                            <span>Doğa</span>
+                        </a>
                     </div>
                     <div class="deneme">
-                        <img src="Images/theatre.png" />
-                        <span>Kültürel</span>
+                        <a href="Tours.aspx?cultural=1">
+                            <img src="Images/theatre.png" />
+                            <span>Kültürel</span>
+                        </a>
                     </div>
                     <div class="deneme">
-                        <img src="Images/disco.png" />
-                        <span>Keyif</span>
+                        <a href="Tours.aspx?enjoy=1">
+                            <img src="Images/disco.png" />
+                            <span>Keyif</span>
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
+
+
     </section>
 
     <%--hizmetlerimiz--%>
@@ -185,8 +151,8 @@
         </div>
     </section>
 
+    <!-- Swiper Container -->
     <section class="section-swip">
-        <!-- Swiper Container -->
         <div class="swiper-container">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
@@ -201,68 +167,6 @@
             </div>
         </div>
     </section>
-
-
-    <%--    <section class="ftco-section" style="height: 66vh; background-color: #292727; padding-top: 61px;">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="slider-hero">
-                        <div class="featured-carousel owl-carousel">
-                            <div class="item">
-                                <div class="work">
-                                    <div class="img d-flex align-items-center justify-content-center" style="background-image: url('Images/slider-1.jpg'); height: 400px;">
-                                        <div class="text text-center">
-                                            <h2>Discover New Places</h2>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="work">
-                                    <div class="img d-flex align-items-center justify-content-center" style="background-image: url('Images/slider-2.jpg'); height: 400px;">
-                                        <div class="text text-center">
-                                            <h2>Dream Destination</h2>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="work">
-                                    <div class="img d-flex align-items-center justify-content-center" style="background-image: url('Images/slider-3.jpg'); height: 400px;">
-                                        <div class="text text-center">
-                                            <h2>Travel Exploration</h2>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="my-5 text-center">
-                            <ul class="thumbnail list-unstyled d-flex justify-content-center">
-                                <li class="active img me-2">
-                                    <a href="#">
-                                        <img src="Images/thumb-1.jpg" alt="Image" class="img-fluid rounded">
-                                    </a>
-                                </li>
-                                <li class="me-2">
-                                    <a href="#">
-                                        <img src="Images/thumb-2.jpg" alt="Image" class="img-fluid rounded">
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <img src="Images/thumb-3.jpg" alt="Image" class="img-fluid rounded">
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>--%>
-
 
     <%--turlar--%>
     <section class="pt-5 pb-5 card-hover-section" style="background-color: #81CFCB;">
@@ -321,12 +225,30 @@
     </section>
 
 
+
+
+    <button  class="Btn" onclick="openWp()">
+        <div class="sign">
+            <svg class="socialSvg whatsappSvg" viewBox="0 0 16 16">
+                <path
+                    d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z">
+                </path>
+            </svg>
+        </div>
+
+        <div class="text">Bizimle İletişime Geçebilirsiniz.</div>
+    </button>
+
     <script type="text/javascript">
+
         function redirectToTour(buttonId) {
             window.location.href = "Tours.aspx?tourtype=" + buttonId;
         }
 
-
+        function openWp() {
+            const whatsappUrl = "https://wa.me/yourphonenumber?text=Merhaba";
+            window.open(whatsappUrl, '_blank');
+        }
 
         var swiper = new Swiper('.swiper-container', {
             direction: 'vertical',  // Dikey kaydırma
@@ -336,10 +258,6 @@
                 disableOnInteraction: false, // Kullanıcı müdahale ettiğinde durmasın
             },
         });
-
-
-
-
 
         $(function () {
             $("#<%= nameSearch.ClientID %>").autocomplete({
@@ -361,51 +279,12 @@
             });
         });
 
+        window.addEventListener('scroll', function () {
+            var scrolled = window.pageYOffset;
+            var parallax = document.querySelector('.parallax');
+            var coords = '0% ' + -(scrolled * 0.5) + 'px';
+            parallax.style.backgroundPosition = coords;
+        });
 
-
-
-        (function ($) {
-
-            "use strict";
-
-            var fullHeight = function () {
-
-                $('.js-fullheight').css('height', $(window).height());
-                $(window).resize(function () {
-                    $('.js-fullheight').css('height', $(window).height());
-                });
-
-            };
-            fullHeight();
-
-            var owl = $('.featured-carousel');
-
-            $('.featured-carousel').owlCarousel({
-                animateOut: 'fadeOut',
-                center: false,
-                items: 1,
-                loop: true,
-                stagePadding: 0,
-                margin: 0,
-                smartSpeed: 1500,
-                autoplay: false,
-                dots: false,
-                nav: false,
-                navText: ['<span class="icon-keyboard_arrow_left">', '<span class="icon-keyboard_arrow_right">']
-            });
-
-            $('.thumbnail li').each(function (slide_index) {
-                $(this).click(function (e) {
-                    owl.trigger('to.owl.carousel', [slide_index, 1500]);
-                    e.preventDefault();
-                })
-            })
-
-            owl.on('changed.owl.carousel', function (event) {
-                $('.thumbnail li').removeClass('active');
-                $('.thumbnail li').eq(event.item.index - 2).addClass('active');
-            })
-
-        })(jQuery);
     </script>
 </asp:Content>

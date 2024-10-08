@@ -59,18 +59,18 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="#!" onclick="redirectToTour(2)">Yurtdışı Turlar</a>
                             </li>
-                            <li class="nav-item">
+                            <%--    <li class="nav-item">
                                 <a class="nav-link" href="#!" onclick="redirectToTour(3)">Online Seminerler</a>
-                            </li>
-                            <li class="nav-item">
+                            </li>--%>
+                            <%--   <li class="nav-item">
                                 <a class="nav-link" href="#!" onclick="redirectToTour(5)">İnteraktif</a>
-                            </li>
+                            </li>--%>
                             <li class="nav-item">
                                 <a class="nav-link" href="#!">Hakkımızda</a>
                             </li>
-                            <li class="nav-item">
+                            <%--       <li class="nav-item">
                                 <a class="nav-link" href="#!">Blog</a>
-                            </li>
+                            </li>--%>
                         </ul>
                         <ul class="navbar-nav d-flex flex-row">
                             <li class="nav-item me-3 me-lg-0">
@@ -96,14 +96,114 @@
         <div>
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>
+         
+                <footer
+                    class="text-center text-lg-start text-dark"
+                    style="background-color: #ECEFF1">
+                    <section
+                        class="d-flex justify-content-between p-4 text-white"
+                        style="background-color: #0a0a09">
+                        <div class="me-5">
+                            <span>Sosyal medya hesaplarımızdan bizimle iletişime geçebilirsiniz:</span>
+                        </div>
 
-            <hr />
-            <footer>
-                <p style="color: #5a5a5a">&copy; <%: DateTime.Now.Year %> - Copyright</p>
-            </footer>
-        </div>
+                        <div>
+                            <a href="" class="text-white me-4">
+                                <i class="fa fa-facebook-f"></i>
+                            </a>
+                            <a href="" class="text-white me-4">
+                                <i class="fa fa-twitter"></i>
+                            </a>
+                            <a href="" class="text-white me-4">
+                                <i class="fa fa-google"></i>
+                            </a>
+                            <a href="" class="text-white me-4">
+                                <i class="fa fa-instagram"></i>
+                            </a>
+                            <a href="" class="text-white me-4">
+                                <i class="fa fa-linkedin"></i>
+                            </a>
+                            <a href="" class="text-white me-4">
+                                <i class="fa fa-github"></i>
+                            </a>
+                        </div>
+                    </section>
 
+                    <section class="">
+                        <div class="container text-center text-md-start mt-5">
+                            <div class="row mt-3">
+                                <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                                    <h6 class="text-uppercase fw-bold">Anatolian Culture</h6>
+                                    <hr
+                                        class="mb-4 mt-0 d-inline-block mx-auto"
+                                        style="width: 60px; background-color: #7c4dff; height: 2px" />
+                                    <p>
+                                        Here you can use rows and columns to organize your footer
+              content. Lorem ipsum dolor sit amet, consectetur adipisicing
+              elit.
+                                    </p>
+                                </div>
 
+                                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                                    <h6 class="text-uppercase fw-bold">Ürünler</h6>
+                                    <hr
+                                        class="mb-4 mt-0 d-inline-block mx-auto"
+                                        style="width: 60px; background-color: #7c4dff; height: 2px" />
+                                    <p>
+                                        <a href="#!" class="text-dark">MDBootstrap</a>
+                                    </p>
+                                    <p>
+                                        <a href="#!" class="text-dark">MDWordPress</a>
+                                    </p>
+                                    <p>
+                                        <a href="#!" class="text-dark">BrandFlow</a>
+                                    </p>
+                                    <p>
+                                        <a href="#!" class="text-dark">Bootstrap Angular</a>
+                                    </p>
+                                </div>
+
+                                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                                    <h6 class="text-uppercase fw-bold">Yardımcı Linkler</h6>
+                                    <hr
+                                        class="mb-4 mt-0 d-inline-block mx-auto"
+                                        style="width: 60px; background-color: #7c4dff; height: 2px" />
+                                    <p>
+                                        <a href="#!" class="text-dark">Your Account</a>
+                                    </p>
+                                    <p>
+                                        <a href="#!" class="text-dark">Become an Affiliate</a>
+                                    </p>
+                                    <p>
+                                        <a href="#!" class="text-dark">Shipping Rates</a>
+                                    </p>
+                                    <p>
+                                        <a href="#!" class="text-dark">Help</a>
+                                    </p>
+                                </div>
+
+                                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                                    <h6 class="text-uppercase fw-bold">İletişim</h6>
+                                    <hr
+                                        class="mb-4 mt-0 d-inline-block mx-auto"
+                                        style="width: 60px; background-color: #7c4dff; height: 2px" />
+                                    <p><i class="fa fa-home mr-3"></i>New York, NY 10012, US</p>
+                                    <p><i class="fa fa-envelope mr-3"></i>info@example.com</p>
+                                    <p><i class="fa fa-phone mr-3"></i>+ 01 234 567 88</p>
+                                    <p><i class="fa fa-print mr-3"></i>+ 01 234 567 89</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <div
+                        class="text-center p-3"
+                        style="background-color: rgba(0, 0, 0, 0.2)">
+                        <p style="color: #5a5a5a">&copy; <%: DateTime.Now.Year %> - Copyright</p>
+                        <a class="text-dark" href="https://mdbootstrap.com/">AnatolianCulture.com</a>
+                    </div>
+                </footer>
+            </div>
     </form>
 
     <script>    

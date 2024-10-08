@@ -198,8 +198,8 @@
         justify-items: center;
         height: 60vh;
         max-height: 60vh;
-        position: sticky;
-        top: 75px;
+        /* position: sticky;
+        top: 75px;*/
         margin-top: 50px;
         padding: 12px;
         width: 25%;
@@ -209,7 +209,7 @@
         flex-direction: column;
         justify-content: space-around;
         background-color: #ffffff;
-        box-shadow: 0 0 8px 0px black;
+        border: 1px solid black;
     }
 }
 @media only screen and (min-width: 768px) and (max-width: 1223px) {
@@ -286,8 +286,8 @@
         justify-items: center;
         height: 60vh;
         max-height: 60vh;
-        position: sticky;
-        top: 75px;
+        /*  position: sticky;
+        top: 75px;*/
         margin-top: 50px;
         padding: 12px;
         width: 25%;
@@ -297,7 +297,7 @@
         flex-direction: column;
         justify-content: space-around;
         background-color: #ffffff;
-        box-shadow: 0 0 8px 0px black;
+        border: 1px solid black;
     }
 }
 @media only screen and (min-width: 576px) and (max-width: 767.98px) {
@@ -379,8 +379,8 @@
         justify-items: center;
         height: 60vh;
         max-height: 60vh;
-        position: sticky;
-        top: 75px;
+        /*  position: sticky;
+        top: 75px;*/
         margin-top: 50px;
         padding: 12px;
         width: 100%;
@@ -390,7 +390,7 @@
         flex-direction: column;
         justify-content: space-around;
         background-color: #ffffff;
-        box-shadow: 0 0 8px 0px black;
+        border: 1px solid black;
     }
 
         .aside-content input {
@@ -477,8 +477,8 @@
         justify-items: center;
         height: 60vh;
         max-height: 60vh;
-        position: sticky;
-        top: 75px;
+        /*  position: sticky;
+        top: 75px;*/
         margin-top: 50px;
         padding: 12px;
         width: 100%;
@@ -488,7 +488,7 @@
         flex-direction: column;
         justify-content: space-around;
         background-color: #ffffff;
-        box-shadow: 0 0 8px 0px black;
+        border: 1px solid black;
     }
 
         .aside-content input {
@@ -546,3 +546,116 @@
         .services-list li.excluded .icon {
             color: #dc3545;
         }
+
+
+
+
+.section-swip {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* Taşan içerikleri gizle */
+}
+
+.swiper-container {
+    width: 100%; /* Genişliği sayfanın tamamını kapsayacak şekilde ayarla */
+    height: 100vh; /* Tam ekran yüksekliğinde */
+}
+
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+    .swiper-slide img {
+        width: 100%;
+        height: 100%; /* Yükseklik tam dolu olacak */
+        object-fit: cover; /* Görüntüyü kırpmadan içeri sığdır */
+    }
+
+
+.whatsapp-button {
+    background-color: #25D366;
+    padding: 10px;
+    border-radius: 50px;
+    transition: width 0.4s ease, height 0.4s ease, border-radius 0.4s ease;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+
+
+.Btn {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 45px;
+    height: 45px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    overflow: hidden;
+    transition-duration: 0.3s;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.199);
+    background-color: #00d757;
+}
+
+.sign {
+    width: 100%;
+    transition-duration: 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+    .sign svg {
+        width: 25px;
+    }
+
+        .sign svg path {
+            fill: white;
+        }
+
+.text {
+    position: absolute;
+    right: 0%;
+    width: 0%;
+    opacity: 0;
+    color: white;
+    font-size: 1.2em;
+    font-weight: 600;
+    transition-duration: 0.3s;
+}
+
+.Btn:hover {
+    width: 450px;
+    border-radius: 40px;
+    transition-duration: 0.3s;
+}
+
+    .Btn:hover .sign {
+        width: 30%;
+        transition-duration: 0.3s;
+        padding-left: 10px;
+    }
+
+    .Btn:hover .text {
+        opacity: 1;
+        width: 70%;
+        transition-duration: 0.3s;
+        padding-right: 10px;
+    }
+
+.Btn:active {
+    transform: translate(2px, 2px);
+}
