@@ -108,26 +108,25 @@
                 <h5>Bizimle iletişime geçebilirsiniz</h5>
                 <div>
                     <label>Adınız*</label>
-                    <input type="text" class="form-control" name="name" value="" required="">
+                    <input type="text" class="form-control" id="userName" runat="server" required>
                 </div>
                 <div>
                     <label>E-posta Adresiniz*</label>
-                    <input type="text" class="form-control" name="name" value="" required="">
+                    <input type="email" class="form-control" id="userEmail" runat="server" required>
                 </div>
                 <div>
                     <label>Konu</label>
-                    <input type="text" class="form-control" name="name" value="">
+                    <input type="text" class="form-control" id="subject" runat="server">
                 </div>
                 <div>
                     <label>İletiniz</label>
-                    <textarea class="form-control" style="background-color: #f9f9f9;" rows="5" cols="50"></textarea>
+                    <textarea class="form-control" id="messageContent" runat="server" style="background-color: #f9f9f9;" rows="5" cols="50"></textarea>
                 </div>
-
                 <div class="text-center">
-
-                    <button class="btn btn-success btn_teal">Gönder</button>
+                    <asp:Button Text="Gönder" runat="server" ID="sendMailBtn" CssClass="btn btn-success btn_teal" OnClick="sendMailBtn_Click" />
                 </div>
             </aside>
+
         </div>
     </section>
 </asp:Content>
