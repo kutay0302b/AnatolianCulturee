@@ -1,3 +1,4 @@
 ﻿User-agent: *
 Disallow: /admin/
 Allow: /
+Sitemap: https://www.anatolianculture.com/sitemap.xml
