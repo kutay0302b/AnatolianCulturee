@@ -3,6 +3,7 @@
 
 <script runat="server">
 
+
     void Application_Start(object sender, EventArgs e)
     {
         // Yönlendirme yapılandırmasını burada başlatın
