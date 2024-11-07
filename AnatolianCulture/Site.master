@@ -107,7 +107,7 @@
                         <span>Sosyal medya hesaplarımızdan bizimle iletişime geçebilirsiniz:</span>
                     </div>
 
-                    <div>
+                    <%--<div>
                         <a href="https://www.facebook.com/anatolianculturorganization/" class="text-white me-4" target="_blank" rel="noopener noreferrer">
                             <i class="fa fa-facebook-f"></i>
                         </a>
@@ -117,7 +117,7 @@
                         </a>
 
 
-                    </div>
+                    </div>--%>
                 </section>
 
                 <section class="">
@@ -133,7 +133,7 @@
                                 </p>
                             </div>
 
-                            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                           <%-- <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
                                 <h6 class="text-uppercase fw-bold">Ürünler</h6>
                                 <hr
                                     class="mb-4 mt-0 d-inline-block mx-auto"
@@ -150,9 +150,9 @@
                                 <p>
                                     <a href="#!" class="text-dark">Bootstrap Angular</a>
                                 </p>
-                            </div>
+                            </div>--%>
 
-                            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                           <%-- <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
                                 <h6 class="text-uppercase fw-bold">Yardımcı Linkler</h6>
                                 <hr
                                     class="mb-4 mt-0 d-inline-block mx-auto"
@@ -169,7 +169,7 @@
                                 <p>
                                     <a href="#!" class="text-dark">Help</a>
                                 </p>
-                            </div>
+                            </div>--%>
 
                             <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
                                 <h6 class="text-uppercase fw-bold">İletişim</h6>
