@@ -12,29 +12,72 @@
             font-weight: bold;
         }
 
-        #v-pills-tab .nav-link {
-            background-color: #81CFCB !important; /* Arka plan rengini ayarlar */
-            border: 1px solid #29cdcd !important; /* Kenarlık stilini ayarlar */
-            border-radius: 0 !important; /* Kenarlık yuvarlaklığını kaldırır */
-            color: black !important; /* Yazı rengini ayarlar */
+        /* dikey sekmeler için normal durum stilleri */
+        /*     #v-pills-tab .nav-link {
+            background-color: #81CFCB !important;
+            border: 1px solid #29cdcd !important;
+            border-radius: 0 !important;
+            color: black !important;
         }
 
             #v-pills-tab .nav-link.active {
-                background-color: #29cdcd !important; /* Aktif tab için arka plan rengini değiştir */
-                color: white !important; /* Aktif tab için yazı rengini değiştir */
-            }
+                background-color: #29cdcd !important;
+                color: white !important;
+            }*/
 
-        @media (max-width: 768px) {
-            #v-pills-tab {
-                flex-direction: row; /* Yatay düzen */
-                justify-content: space-around; /* Butonlar arası boşluk ayarlama */
-                gap: 0; /* Aralık sıfırlama */
-            }
-
-                #v-pills-tab .nav-link {
-                    width: 30%; /* Her buton için genişlik ayarlama */
-                }
+        #v-pills-tab .nav-link {
+            padding: 0.8em 1.8em;
+            border: 2px solid #17C3B2;
+            position: relative;
+            overflow: hidden;
+            background-color: transparent;
+            text-align: center;
+            text-transform: uppercase;
+            font-size: 16px;
+            transition: .3s;
+            z-index: 1;
+            font-family: inherit;
+            color: #000;
         }
+
+            #v-pills-tab .nav-link::before {
+                content: '';
+                width: 0;
+                height: 300%;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%) rotate(45deg);
+                background: #17C3B2;
+                transition: .5s ease;
+                display: block;
+                z-index: -1;
+            }
+
+            #v-pills-tab .nav-link:hover::before {
+                width: 105%;
+            }
+
+            #v-pills-tab .nav-link:hover {
+                color: #111;
+            }
+
+        /* Yatay sekmeler için normal durum stilleri */
+        #v-pills-tab-mobile .nav-link {
+            gap: 5px;
+            border: 1px solid #17C3B2;
+            position: relative;
+            overflow: hidden;
+            background-color: transparent;
+            text-align: center;
+            z-index: 1;
+            color: #000;
+        }
+
+            #v-pills-tab-mobile .nav-link.active {
+                background-color: #29cdcd !important;
+                color: white !important;
+            }
 
         .tab-in-container {
             display: flex;
@@ -47,17 +90,21 @@
 
 
         .banner {
-            width: 100%; /* Ekran genişliğine göre tam genişlikte */
-            max-height: 300px; /* Maksimum yüksekliği 300px */
-            overflow: hidden; /* Taşan içerikleri gizlemek için */
+            width: 100%;
+            max-height: 300px;
+            overflow: hidden;
         }
 
             .banner img {
-                width: 100%; /* Resim genişliğini tam ekran yap */
-                height: auto; /* Yüksekliği orantılı olarak ayarla */
-                max-height: 300px; /* Resim yüksekliğini sınırla */
-                object-fit: cover; /* Resmin boyutunu alanla eşleştir */
+                width: 100%;
+                height: auto;
+                max-height: 300px;
+                object-fit: cover;
             }
+
+        .set-color {
+            color: black
+        }
     </style>
     <section style="height: 69px; background: #0a0a09;"></section>
 
@@ -69,8 +116,24 @@
         <div class="container tour-detail-main-container" style="gap: 20px;">
             <%--TUR PANEL--%>
             <div class="detail-container ">
+                <!-- Mobil Cihazlarda Görünen Yatay Sekmeler -->
+                <div class="nav nav-pills d-md-none mb-3 mt-3" id="v-pills-tab-mobile" role="tablist" style="gap: 5px;">
+                    <button class="custom-btn-tab nav-link active" data-bs-toggle="pill" data-bs-target="#v-pills-home" type="button" role="tab"
+                        aria-controls="v-pills-home" aria-selected="true">
+                        Tur Programı</button>
+                    <button class=" custom-btn-tab nav-link" data-bs-toggle="pill" data-bs-target="#v-pills-profile" type="button" role="tab"
+                        aria-controls="v-pills-profile" aria-selected="false">
+                        Fiyatlandırma</button>
+                    <button class=" custom-btn-tab nav-link" data-bs-toggle="pill" data-bs-target="#v-pills-messages" type="button" role="tab"
+                        aria-controls="v-pills-messages" aria-selected="false">
+                        Hizmetler</button>
+                </div>
+
+                <!-- diğer Görünen Yatay Sekmeler -->
+
                 <div class="d-flex align-items-start">
-                    <div class="nav flex-column nav-pills me-3 custom-responsive" style="gap: 30px;" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                    <div class="nav flex-column nav-pills me-3 d-none d-md-flex" style="gap: 30px;" id="v-pills-tab" role="tablist"
+                        aria-orientation="vertical">
                         <button class="nav-link active btnTab" id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true">Tur Programı</button>
                         <button class="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false">Fiyatlandırma</button>
                         <button class="nav-link" id="v-pills-messages-tab" data-bs-toggle="pill" data-bs-target="#v-pills-messages" type="button" role="tab" aria-controls="v-pills-messages" aria-selected="false">Hizmetler</button>
@@ -190,10 +253,10 @@
                 </div>
                 <div>
                     <label>İletiniz</label>
-                    <textarea class="form-control" id="messageContent" runat="server" style="background-color: #f9f9f9;" rows="5" cols="50"></textarea>
+                    <textarea class="form-control" id="messageContent" runat="server" style="background-color: #f9f9f9; border-color: #17C3B2;" rows="5" cols="50"></textarea>
                 </div>
                 <div class="text-center">
-                    <asp:Button Text="Gönder" runat="server" ID="sendMailBtn" CssClass="btn btn-success btn_teal" OnClick="sendMailBtn_Click" />
+                    <asp:Button Text="Gönder" runat="server" ID="sendMailBtn" CssClass="btn btn-success btn_teal set-color" OnClick="sendMailBtn_Click" />
                 </div>
             </aside>
         </div>
@@ -213,6 +276,33 @@
 
         // Resim kaynağını (src) rastgele seçilen resimle güncelle
         document.getElementById("randomImage").src = randomImage;
+
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const tabContent = document.querySelector(".tab-content");
+            const tabPanes = tabContent.querySelectorAll(".tab-pane");
+
+            function setTabContentWidth() {
+                let maxWidth = 0;
+
+                // Tüm sekme içeriklerinin genişliğini ölç
+                tabPanes.forEach(tabPane => {
+                    tabPane.style.display = "block"; // Genişlik ölçümü için geçici olarak görünür yap
+                    maxWidth = Math.max(maxWidth, tabPane.scrollWidth);
+                    tabPane.style.display = ""; // Eski görünürlüğü geri yükle
+                });
+
+                // Maksimum genişliği tüm sekmelere uygula
+                tabContent.style.width = maxWidth + "px";
+            }
+
+            // Sayfa yüklendiğinde ve sekme değiştirildiğinde çalıştır
+            setTabContentWidth();
+            document.querySelectorAll('[data-bs-toggle="pill"]').forEach(tab => {
+                tab.addEventListener("shown.bs.tab", setTabContentWidth);
+            });
+        });
+
     </script>
 </asp:Content>
 

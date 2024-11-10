@@ -25,7 +25,7 @@
 
 .mask-custom {
     backdrop-filter: blur(5px);
-    background-color: rgba(255, 255, 255, .15);
+    background-color: rgba(255, 255, 255, 0.15);
 }
 
 .navbar-brand {
@@ -123,9 +123,7 @@
             }
 }
 /*---------------------------------------------------------*/
-@media only screen and (min-width : 1224px) {
-
-
+@media only screen and (min-width: 1224px) {
     .deneme {
         display: flex;
         justify-content: center;
@@ -146,9 +144,8 @@
         }
 
     #intro img {
-        width: 40%
+        width: 40%;
     }
-
 
     .header-search {
         margin-top: 35vh;
@@ -212,8 +209,8 @@
         border: 1px solid black;
     }
 }
-@media only screen and (min-width: 768px) and (max-width: 1223px) {
 
+@media only screen and (min-width: 768px) and (max-width: 1223px) {
     .deneme {
         display: flex;
         justify-content: center;
@@ -234,9 +231,8 @@
         }
 
     #intro img {
-        width: 40%
+        width: 40%;
     }
-
 
     .header-search {
         margin-top: 35vh;
@@ -300,8 +296,8 @@
         border: 1px solid black;
     }
 }
+
 @media only screen and (min-width: 576px) and (max-width: 767.98px) {
-
     .deneme {
         display: flex;
         justify-content: center;
@@ -322,9 +318,8 @@
         }
 
     #intro img {
-        width: 40%
+        width: 40%;
     }
-
 
     .header-search {
         margin-top: 12vh;
@@ -397,9 +392,8 @@
             background-color: #f9f9f9;
         }
 }
-@media only screen and (max-width: 575.98px) 
- {
 
+@media only screen and (max-width: 575.98px) {
     .deneme {
         display: flex;
         justify-content: center;
@@ -420,9 +414,8 @@
         }
 
     #intro img {
-        width: 40%
+        width: 40%;
     }
-
 
     .header-search {
         margin-top: 12vh;
@@ -495,31 +488,33 @@
             background-color: #f9f9f9;
         }
 }
+
 .aside-content input {
     background-color: #f9f9f9;
+    border-color: #17C3B2;
 }
 
-.detail-container-main {
-    display: flex;
-    flex-direction: column;
-    max-width: 50%;
-    align-items: flex-start;
-    margin-top: 2rem;
-    /*            border: 1px solid gray;
+
+
+    .detail-container-main {
+        display: flex;
+        flex-direction: column;
+        /*max-width: 50%;*/
+        align-items: flex-start;
+        margin-top: 2rem;
+        /*            border: 1px solid gray;
             padding: 15px;
             border-radius: 1rem;
             box-shadow: 0 0 10px 0px black;*/
-}
-
+    }
 
 .detail-payment {
     display: flex;
     gap: 2.8rem;
-    margin-left: 17rem;
-    margin-top: 10px;
+    /*margin-left: 17rem;*/
+    /*margin-top: 10px;*/
     font-size: 20px;
 }
-
 
 .services-list {
     list-style: none;
@@ -547,9 +542,6 @@
             color: #dc3545;
         }
 
-
-
-
 .section-swip {
     height: 100vh;
     display: flex;
@@ -575,9 +567,8 @@
         object-fit: cover; /* Görüntüyü kırpmadan içeri sığdır */
     }
 
-
 .whatsapp-button {
-    background-color: #25D366;
+    background-color: #25d366;
     padding: 10px;
     border-radius: 50px;
     transition: width 0.4s ease, height 0.4s ease, border-radius 0.4s ease;
@@ -588,8 +579,6 @@
     justify-content: center;
     overflow: hidden;
 }
-
-
 
 .Btn {
     display: flex;
