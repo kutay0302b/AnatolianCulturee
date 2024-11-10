@@ -90,7 +90,7 @@
             }
         }
     </style>
-    <section style="height: 69px; background: #0a0a09;"></section>
+    <section style="height: 111px; background: #0a0a09;"></section>
     <section style="background-color: #f4f3f3; padding: 30px 0 20px 0;">
         <div class="text-center">
             <h1>TURLARIMIZ</h1>

@@ -1,9 +1,8 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.master" AutoEventWireup="true" CodeFile="About.aspx.cs" Inherits="_About" %>
 
-<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
-</asp:Content>
+
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="Server">
-    <section style="height: 69px; background: #0a0a09;"></section>
+    <section style="height: 111px; background: #0a0a09;"></section>
     <section class="pb-5" style="background-color: #f9f9f9;">
         <div style="background-color: #36B2A8; display: flex; justify-content: center; width: auto; flex-wrap: wrap; align-items: center;">
             <img style="width: 70%;" src="Images/ac-badge.jpg" />

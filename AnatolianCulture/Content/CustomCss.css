@@ -25,7 +25,7 @@
 
 .mask-custom {
     backdrop-filter: blur(5px);
-    background-color: rgba(255, 255, 255, 0.15);
+    background-color: #00000061;
 }
 
 .navbar-brand {
@@ -542,18 +542,18 @@
             color: #dc3545;
         }
 
-.section-swip {
+/*.section-swip {
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    overflow: hidden; /* Taşan içerikleri gizle */
-}
+    overflow: hidden;*/ /* Taşan içerikleri gizle */
+/*}
 
 .swiper-container {
-    width: 100%; /* Genişliği sayfanın tamamını kapsayacak şekilde ayarla */
-    height: 100vh; /* Tam ekran yüksekliğinde */
-}
+    width: 100%;*/ /* Genişliği sayfanın tamamını kapsayacak şekilde ayarla */
+    /*height: 100vh;*/ /* Tam ekran yüksekliğinde */
+/*}
 
 .swiper-slide {
     display: flex;
@@ -563,9 +563,129 @@
 
     .swiper-slide img {
         width: 100%;
-        height: 100%; /* Yükseklik tam dolu olacak */
-        object-fit: cover; /* Görüntüyü kırpmadan içeri sığdır */
+        height: 100%;*/ /* Yükseklik tam dolu olacak */
+        /*object-fit: cover;*/ /* Görüntüyü kırpmadan içeri sığdır */
+    /*}*/
+
+
+/* Slider Konteyner Ayarları */
+.section-swip {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.swiper-container {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+    .swiper-slide img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
     }
+
+/* Yazıların Üst Üste Geleceği Alan */
+.text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    width: 70%;
+    max-width: 600px;
+    height: 300px;
+    padding: 30px;
+    box-sizing: border-box;
+    /*background-color: rgba(0, 0, 0, 0.6);*/
+    background-color: rgb(0 0 0 / 0%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+    border-left: 10px solid white;
+    border-right: 10px solid white;
+}
+
+    /* Üst Border */
+    .text-overlay::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 10px; /* Border kalınlığı */
+        background: linear-gradient(to right, white, #00000000);
+        z-index: 2;
+    }
+
+    /* Alt Border */
+    .text-overlay::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 10px; /* Border kalınlığı */
+        background: linear-gradient(to left, white, #00000000);
+        z-index: 2;
+    }
+
+.swiper-slide-active .text-overlay {
+    opacity: 1;
+}
+
+.text-overlay h2 {
+    font-size: 4.5em; /* Yazı boyutu büyütüldü */
+    font-weight: bold;
+    margin: 0;
+    text-transform: uppercase;
+    line-height: 1.2;
+}
+
+.text-overlay h3 {
+    font-size: 2.8em; /* Alt başlık yazı boyutu büyütüldü */
+    font-weight: bold;
+    margin: 10px 0 0;
+    /*color: #17C3B2;*/
+    color:white;
+    display: inline-block;
+    position: relative;
+}
+
+    .text-overlay h3::after {
+        content: "";
+        position: absolute;
+        bottom: -8px;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        background-color: #17C3B2;
+    }
+
+/* Fade-in Animasyonu */
+@keyframes fadeInText {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
 
 .whatsapp-button {
     background-color: #25d366;

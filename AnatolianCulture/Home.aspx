@@ -152,21 +152,33 @@
     </section>
 
     <!-- Swiper Container -->
-    <section class="section-swip">
-        <div class="swiper-container">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <img src="Images/slider-1.jpg" />
+   <section class="section-swip">
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="Images/new-slider-1.jpg" />
+                <div class="text-overlay">
+                    <h2>TRAKYA'DA</h2>
+                    <h3>BAĞ BOZUMU</h3>
                 </div>
-                <div class="swiper-slide">
-                    <img src="Images/slider-2.jpg" />
+            </div>
+            <div class="swiper-slide">
+                <img src="Images/new-slider-2.jpg" />
+                <div class="text-overlay">
+                    <h2>BÜYÜK ADA'DA</h2>
+                    <h3>KÜLTÜR YÜRÜYÜŞÜ</h3>
                 </div>
-                <div class="swiper-slide">
-                    <img src="Images/slider-3.jpg" />
+            </div>
+            <div class="swiper-slide">
+                <img src="Images/new-slider-3.jpg" />
+                <div class="text-overlay">
+                    <h2>DİĞER ETKİNLİK</h2>
+                    <h3>ÖRNEK BAŞLIK</h3>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
     <%--turlar--%>
     <section class="pt-5 pb-5 card-hover-section" style="background-color: #81CFCB;">
@@ -254,10 +266,12 @@
             direction: 'vertical',  // Dikey kaydırma
             loop: true,             // Sonsuz döngü
             autoplay: {
-                delay: 3000,          // 3 saniyede bir kaydırma
+                delay: 99999,        // 4 saniyede bir kaydırma
                 disableOnInteraction: false, // Kullanıcı müdahale ettiğinde durmasın
             },
+            speed: 1500             // Geçiş hızını 1.5 saniye yap
         });
+
 
         $(function () {
             $("#<%= nameSearch.ClientID %>").autocomplete({

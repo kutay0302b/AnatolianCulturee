@@ -106,7 +106,7 @@
             color: black
         }
     </style>
-    <section style="height: 69px; background: #0a0a09;"></section>
+    <section style="height: 111px; background: #0a0a09;"></section>
 
     <section class="pb-5" style="background-color: #f9f9f9;">
         <div class="banner">
