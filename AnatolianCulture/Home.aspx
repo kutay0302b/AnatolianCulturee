@@ -16,7 +16,9 @@
             text-decoration: none;
         }
 
-      
+        .swiper-slide img {
+            filter: brightness(0.7);
+        }
     </style>
 
     <%--header--%>
@@ -152,33 +154,33 @@
     </section>
 
     <!-- Swiper Container -->
-   <section class="section-swip">
-    <div class="swiper-container">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide">
-                <img src="Images/new-slider-1.jpg" />
-                <div class="text-overlay">
-                    <h2>TRAKYA'DA</h2>
-                    <h3>BAĞ BOZUMU</h3>
+    <section class="section-swip">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="Images/new-slider-1.jpg" />
+                    <div class="text-overlay">
+                        <h2>TRAKYA'DA</h2>
+                        <h3>BAĞ BOZUMU</h3>
+                    </div>
                 </div>
-            </div>
-            <div class="swiper-slide">
-                <img src="Images/new-slider-2.jpg" />
-                <div class="text-overlay">
-                    <h2>BÜYÜK ADA'DA</h2>
-                    <h3>KÜLTÜR YÜRÜYÜŞÜ</h3>
+                <div class="swiper-slide">
+                    <img src="Images/new-slider-2.jpg" />
+                    <div class="text-overlay">
+                        <h2>BÜYÜK ADA'DA</h2>
+                        <h3>KÜLTÜR YÜRÜYÜŞÜ</h3>
+                    </div>
                 </div>
-            </div>
-            <div class="swiper-slide">
-                <img src="Images/new-slider-3.jpg" />
-                <div class="text-overlay">
-                    <h2>DİĞER ETKİNLİK</h2>
-                    <h3>ÖRNEK BAŞLIK</h3>
+                <div class="swiper-slide">
+                    <img src="Images/new-slider-3.jpg" />
+                    <div class="text-overlay">
+                        <h2>DİĞER ETKİNLİK</h2>
+                        <h3>ÖRNEK BAŞLIK</h3>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
     <%--turlar--%>
     <section class="pt-5 pb-5 card-hover-section" style="background-color: #81CFCB;">
@@ -239,7 +241,7 @@
 
 
 
-    <button  class="Btn" onclick="openWp()">
+    <button class="Btn" onclick="openWp()">
         <div class="sign">
             <svg class="socialSvg whatsappSvg" viewBox="0 0 16 16">
                 <path

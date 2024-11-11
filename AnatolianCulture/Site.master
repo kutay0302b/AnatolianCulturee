@@ -107,7 +107,7 @@
                     class="d-flex justify-content-between p-4 text-white"
                     style="background-color: #0a0a09">
                     <div class="me-5">
-                        <span>Sosyal medya hesaplarımızdan bizimle iletişime geçebilirsiniz:</span>
+                        <%--<span>Sosyal medya hesaplarımızdan bizimle iletişime geçebilirsiniz:</span>--%>
                     </div>
 
                     <%--<div>
