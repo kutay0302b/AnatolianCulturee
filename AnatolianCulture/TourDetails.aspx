@@ -178,7 +178,7 @@
                         <%--ÖDEME ALANI--%>
                         <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
                             <div class="detail-payment tab-in-container">
-                                <div>
+                                <%--<div>
                                     <h4>NAKİT / BANKA HAVALESİ</h4>
                                 </div>
                                 <div style="display: flex; flex-direction: column; align-items: center;">
@@ -188,8 +188,28 @@
                                 <div style="display: flex; flex-direction: column; align-items: center;">
                                     <h4>TEK KİŞİLİK ODADA KALMA FARKI </h4>
                                     <label>2000 TL</label>
-                                </div>
+                                </div>--%>
+
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col" style="background-color: transparent;">Genel Fiyat</th>
+                                            <th scope="col" style="background-color: transparent;">Tek Kişilik yatak</th>
+                                            <th scope="col" style="background-color: transparent;">Çift kişilik yatak</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="table-group-divider" style="color: teal;">
+                                        <tr>
+                                            <td>13.500 TL</td>
+                                            <td>1500 TL</td>
+                                            <td>2500 TL</td>
+                                        </tr>
+
+
+                                    </tbody>
+                                </table>
                             </div>
+
                         </div>
                         <%--DAHİL OLAN İÇERİK--%>
                         <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
