@@ -194,20 +194,23 @@
                                     <thead>
                                         <tr>
                                             <th scope="col" style="background-color: transparent;">Genel Fiyat</th>
-                                            <th scope="col" style="background-color: transparent;">Tek Kişilik yatak</th>
-                                            <th scope="col" style="background-color: transparent;">Çift kişilik yatak</th>
+                                            <th scope="col" style="background-color: transparent;">TEK KİŞİLİK ODADA KALMA FARKI</th>
+                                            <th scope="col" style="background-color: transparent;">İKİ KİŞİLİK ODADA KİŞİ BAŞI FARKI</th>
                                         </tr>
                                     </thead>
                                     <tbody class="table-group-divider" style="color: teal;">
-                                        <tr>
-                                            <td>13.500 TL</td>
-                                            <td>1500 TL</td>
-                                            <td>2500 TL</td>
-                                        </tr>
-
-
+                                        <asp:Repeater ID="Repeater1" runat="server">
+                                            <ItemTemplate>
+                                                <tr>
+                                                    <td><%# Eval("GenelFiyat") %></td>
+                                                    <td><%# Eval("TekKisi") %></td>
+                                                    <td><%# Eval("CiftKisi") %></td>
+                                                </tr>
+                                            </ItemTemplate>
+                                        </asp:Repeater>
                                     </tbody>
                                 </table>
+
                             </div>
 
                         </div>

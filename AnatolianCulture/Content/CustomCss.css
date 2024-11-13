@@ -52,6 +52,8 @@
     overflow: hidden;
     transition: transform 0.3s ease, flex 0.3s ease;
     flex: 1;
+    width: 80%;
+    justify-items: center;
 }
 
     .card-hover-section .card:hover {

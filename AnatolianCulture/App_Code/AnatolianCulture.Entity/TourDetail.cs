@@ -13,5 +13,10 @@ public class TourDetail
     public string TurIn { get; set; }
     public string TurOut { get; set; }
     public int TurType { get; set; }
+    public string GenelFiyat { get; set; }
+    public string TekKisi { get; set; }
+    public string CiftKisi { get; set; }
+    public string Photo { get; set; }
+
 
 }

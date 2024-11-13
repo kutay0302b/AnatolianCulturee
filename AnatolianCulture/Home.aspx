@@ -186,44 +186,42 @@
     <section class="pt-5 pb-5 card-hover-section" style="background-color: #81CFCB;">
         <div class="container">
             <div class="row">
-                <div class="col-md-3 mb-3">
-
-
+                <div class="col-sm mb-3">
                     <div class="card">
                         <img src="Images/tur1.webp" class="card-img-top" alt="Yurtiçi Turlar">
                         <h4 class="card-title">Yurtiçi Turlar</h4>
                         <div class="card-overlay">
                             <h4 class="card-title">Yurtiçi Turlar</h4>
-                            <p>14 – 17 Kasım Ata Topraklarına Yolculuk: Balkanlara Doğru</p>
+                            <p>Güzel Yurdumuzun Dört Bir Yanını Beraber Gezelim</p>
                             <a href="#" class="btn btn-light btn_teal" onclick="redirectToTour(1)">Detaylar</a>
                         </div>
                     </div>
 
 
                 </div>
-                <div class="col-md-3 mb-3">
+                <div class="col-sm mb-3">
                     <div class="card">
                         <img src="Images/tur2.webp" class="card-img-top" alt="Yurtdışı Turlar">
                         <h4 class="card-title">Yurtdışı Turlar</h4>
                         <div class="card-overlay">
                             <h4 class="card-title">Yurtdışı Turlar</h4>
-                            <p>14 – 17 Kasım Ata Topraklarına Yolculuk: Balkanlara Doğru</p>
+                            <p>DÜnyanın Eşsiz Güzelliklerini Keşfedin</p>
                             <a href="#" class="btn btn-light btn_teal" onclick="redirectToTour(2)">Detaylar</a>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3 mb-3">
+                <div class="col-sm mb-3">
                     <div class="card">
                         <img src="Images/tur3.webp" class="card-img-top" alt="İstanbul Turları">
                         <h4 class="card-title">İstanbul Turları</h4>
                         <div class="card-overlay">
                             <h4 class="card-title">İstanbul Turları</h4>
-                            <p>14 – 17 Kasım Ata Topraklarına Yolculuk: Balkanlara Doğru</p>
+                            <p>Tüm Dünyanın Dilinde Olan İtanbul'u Köşe Bucak Gezin</p>
                             <a href="#" class="btn btn-light btn_teal" onclick="redirectToTour(3)">Detaylar</a>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3 mb-3">
+                <%--<div class="col-md-3 mb-3">
                     <div class="card">
                         <img src="Images/tur4.webp" class="card-img-top" alt="İnteraktif" style="height: 456px;">
                         <h4 class="card-title">İnteraktif</h4>
@@ -233,7 +231,7 @@
                             <a href="#" class="btn btn-light btn_teal" onclick="redirectToTour(4)">Detaylar</a>
                         </div>
                     </div>
-                </div>
+                </div>--%>
             </div>
         </div>
     </section>

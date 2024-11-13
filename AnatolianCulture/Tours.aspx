@@ -48,6 +48,7 @@
             .card-custom .price {
                 font-size: 1.5rem;
                 font-weight: bold;
+                margin:0;
             }
 
             .card-custom .btn-custom {
@@ -69,8 +70,8 @@
 
         @media (max-width: 768px) {
             .card-custom {
-                width: 100%;
-                max-width: none;
+                width: 80%;
+               /* max-width: none;*/
                 transform: none !important;
             }
 
@@ -104,10 +105,13 @@
             <div class="card card-custom">
                 <img src="<%= GetPhotoPath(tour.TurPhoto) %>" class="card-img-top" alt="<%= tour.TurName %>">
                 <div class="card-body">
+                    <div></div>
                     <h5 class="card-title"><%= tour.TurName %></h5>
                     <h6 class="card-subtitle mb-2">Yurtiçi Turlar</h6>
                     <p class="card-text"><%= tour.TurAciklama %></p>
-                    <p class="price"><%= tour.TurFiyat %> TL</p>
+                </div>
+                <div class="card-footer" style="display: flex; align-items: center; justify-content: space-around;">
+                    <p class="price"><%= tour.TurFiyat %></p>
                     <a href="#" class="btn btn-custom" onclick="redirectToDetails(<%= tour.ID %>, <%= tour.TurType %>)">Detaylar</a>
                 </div>
             </div>

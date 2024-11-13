@@ -53,6 +53,11 @@ public class TourContentProvider
                     tourDetails.TurIn = reader.GetString("TurIn");
                     tourDetails.TurOut = reader.GetString("TurOut");
                     tourDetails.TurType = reader.GetInt32("TurType");
+                    tourDetails.GenelFiyat = reader.IsDBNull(reader.GetOrdinal("GenelFiyat")) ? null : reader.GetString("GenelFiyat");
+                    tourDetails.TekKisi = reader.IsDBNull(reader.GetOrdinal("TekKisi")) ? null : reader.GetString("TekKisi");
+                    tourDetails.CiftKisi = reader.IsDBNull(reader.GetOrdinal("CiftKisi")) ? null : reader.GetString("CiftKisi");
+                    tourDetails.Photo = reader.IsDBNull(reader.GetOrdinal("Photo")) ? null : reader.GetString("Photo");
+
 
                     tourDetailsList.Add(tourDetails);
                 }

@@ -24,7 +24,7 @@ public class TourProvider
                     var tour = new Tour();
                     tour.ID = reader.GetInt32("ID");
                     tour.TurName = reader.GetString("TurName");
-                    tour.TurFiyat = reader.GetInt32("TurFiyat");
+                    tour.TurFiyat = reader.GetString("TurFiyat");
                     tour.TurType = reader.GetInt32("TurType");
                     tour.TurAciklama = reader.GetString("TurAciklama");
                     tour.TurPhoto = reader.GetString("TurPhoto");
@@ -43,7 +43,7 @@ public class TourProvider
         using (MySqlConnection conn = new MySqlConnection(Tools.GetConnStr()))
         {
             conn.Open();
-            var cmd = new MySqlCommand("SELECT * FROM anatolianculture.t_tur WHERE TurBasTarih >= CURDATE() AND TurBitTarih >= CURDATE();", conn);
+            var cmd = new MySqlCommand("SELECT * FROM anatolianculture.t_tur WHERE (MONTH(CURDATE()) < MONTH(TurBasTarih) OR (MONTH(CURDATE()) = MONTH(TurBasTarih) AND DAY(CURDATE()) < DAY(TurBasTarih))) ORDER BY TurBasTarih;\r\n", conn);
             using (var reader = cmd.ExecuteReader())
             {
                 while (reader.Read())
@@ -51,12 +51,14 @@ public class TourProvider
                     var tour = new Tour();
                     tour.ID = reader.GetInt32("ID");
                     tour.TurName = reader.GetString("TurName");
-                    tour.TurFiyat = reader.GetInt32("TurFiyat");
+                    tour.TurFiyat = reader.GetString("TurFiyat");
                     tour.TurType = reader.GetInt32("TurType");
                     tour.TurAciklama = reader.GetString("TurAciklama");
                     tour.TurPhoto = reader.GetString("TurPhoto");
-                    tour.TurBasTarih = reader.GetDateTime("TurBasTarih");
-                    tour.TurBitTarih = reader.GetDateTime("TurBitTarih");
+                    tour.TurBasTarih = reader.IsDBNull(reader.GetOrdinal("TurBasTarih")) ? (DateTime?)null : reader.GetDateTime("TurBasTarih");
+                    tour.TurBitTarih = reader.IsDBNull(reader.GetOrdinal("TurBitTarih")) ? (DateTime?)null : reader.GetDateTime("TurBitTarih");
+
+
 
 
                     tourList.Add(tour);
@@ -82,7 +84,7 @@ public class TourProvider
                     var tour = new Tour();
                     tour.ID = reader.GetInt32("ID");
                     tour.TurName = reader.GetString("TurName");
-                    tour.TurFiyat = reader.GetInt32("TurFiyat");
+                    tour.TurFiyat = reader.GetString("TurFiyat");
                     tour.TurType = reader.GetInt32("TurType");
                     tour.TurAciklama = reader.GetString("TurAciklama");
                     tour.TurPhoto = reader.GetString("TurPhoto");

@@ -10,10 +10,10 @@ public class Tour
 {
     public int ID { get; set; }
     public string TurName { get; set; }
-    public int TurFiyat { get; set; }
+    public string TurFiyat { get; set; }
     public int TurType { get; set; }
     public string TurAciklama { get; set; }
     public string TurPhoto { get; set; }
-    public DateTime TurBasTarih { get; set; }
-    public DateTime TurBitTarih { get; set; }
+    public DateTime? TurBasTarih { get; set; }
+    public DateTime? TurBitTarih { get; set; }
 }
