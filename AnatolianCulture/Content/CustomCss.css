@@ -1,4 +1,8 @@
-﻿/* Color of the links BEFORE scroll */
+﻿body {
+    background-color: #ECEFF1;
+}
+
+/* Color of the links BEFORE scroll */
 .nav-link,
 .navbar-toggler-icon,
 .navbar-toggler,
@@ -617,33 +621,34 @@
     flex-direction: column;
     justify-content: center;
     overflow: hidden;
-    border-left: 10px solid white;
-    border-right: 10px solid white;
+    border: 10px solid white;
+    /*border-left: 10px solid white;
+    border-right: 10px solid white;*/
 }
 
     /* Üst Border */
-    .text-overlay::before {
+    /*.text-overlay::before {
         content: "";
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
-        height: 10px; /* Border kalınlığı */
-        background: linear-gradient(to right, white, #00000000);
+        height: 10px;*/ /* Border kalınlığı */
+        /*background: linear-gradient(to right, white, #00000000);
         z-index: 2;
-    }
+    }*/
 
     /* Alt Border */
-    .text-overlay::after {
+    /*.text-overlay::after {
         content: "";
         position: absolute;
         bottom: 0;
         left: 0;
         width: 100%;
-        height: 10px; /* Border kalınlığı */
-        background: linear-gradient(to left, white, #00000000);
+        height: 10px;*/ /* Border kalınlığı */
+        /*background: linear-gradient(to left, white, #00000000);
         z-index: 2;
-    }
+    }*/
 
 .swiper-slide-active .text-overlay {
     opacity: 1;

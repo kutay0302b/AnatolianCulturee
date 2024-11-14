@@ -181,9 +181,9 @@
             </div>
         </div>
     </section>
-
+    <%--#81CFCB--%>
     <%--turlar--%>
-    <section class="pt-5 pb-5 card-hover-section" style="background-color: #81CFCB;">
+    <section class="pt-5 pb-5 card-hover-section">
         <div class="container">
             <div class="row">
                 <div class="col-sm mb-3">
@@ -266,11 +266,18 @@
             direction: 'vertical',  // Dikey kaydırma
             loop: true,             // Sonsuz döngü
             autoplay: {
-                delay: 99999,        // 4 saniyede bir kaydırma
+                delay: 4000,        // 4 saniyede bir kaydırma
                 disableOnInteraction: false, // Kullanıcı müdahale ettiğinde durmasın
             },
-            speed: 1500             // Geçiş hızını 1.5 saniye yap
+            speed: 1500,            // Geçiş hızını 1.5 saniye yap
+            allowTouchMove: false,  // Kullanıcının kaydırmasını engelle
+            breakpoints: {
+                640: {
+                    allowTouchMove: false // Ekran genişliği 640px'den küçükse kaydırmaya izin ver
+                }
+            }
         });
+
 
 
         $(function () {
