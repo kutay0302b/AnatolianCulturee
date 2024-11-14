@@ -1,4 +1,7 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
+using System.Collections.Generic;
+using System.Web.Services;
 using System.Web.UI;
 
 public partial class Home : Page
@@ -11,6 +14,9 @@ public partial class Home : Page
 
 
     }
+
+
+
 
 
 }

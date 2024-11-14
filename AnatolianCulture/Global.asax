@@ -6,7 +6,13 @@
 
     void Application_Start(object sender, EventArgs e)
     {
-        // Yönlendirme yapılandırmasını burada başlatın
+       ScriptResourceDefinition myScriptResDef = new ScriptResourceDefinition();
+    myScriptResDef.Path = "~/Scripts/WebForms/MSAjax/MicrosoftAjax.js";
+    myScriptResDef.DebugPath = "~/Scripts/WebForms/MSAjax/MicrosoftAjax.debug.js";
+    myScriptResDef.CdnPath = "http://ajax.microsoft.com/ajax/4.5/1/MicrosoftAjax.js";
+    myScriptResDef.CdnDebugPath = "http://ajax.microsoft.com/ajax/4.5/1/MicrosoftAjax.debug.js";
+    ScriptManager.ScriptResourceMapping.AddDefinition("microsoftajax", null, myScriptResDef);
+
         RouteConfig.RegisterRoutes(RouteTable.Routes);
     }
     

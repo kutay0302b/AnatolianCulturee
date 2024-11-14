@@ -4,6 +4,7 @@
 <%@ Import Namespace="System.Globalization" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
+
     <style>
         .deneme a {
             display: flex;
@@ -59,8 +60,6 @@
                 </div>
             </div>
         </div>
-
-
     </section>
 
     <%--hizmetlerimiz--%>
@@ -181,6 +180,8 @@
             </div>
         </div>
     </section>
+  
+
     <%--#81CFCB--%>
     <%--turlar--%>
     <section class="pt-5 pb-5 card-hover-section">
@@ -308,4 +309,6 @@
         });
 
     </script>
+
+
 </asp:Content>
