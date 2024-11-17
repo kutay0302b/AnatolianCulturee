@@ -222,9 +222,9 @@
                         </div>
                     </div>
                 </div>
-                <%--<div class="col-md-3 mb-3">
+                <div class="col-sm mb-3">
                     <div class="card">
-                        <img src="Images/tur4.webp" class="card-img-top" alt="İnteraktif" style="height: 456px;">
+                        <img src="Images/tur4.webp" class="card-img-top" alt="İnteraktif" style="">
                         <h4 class="card-title">İnteraktif</h4>
                         <div class="card-overlay">
                             <h4 class="card-title">İnteraktif</h4>
@@ -232,7 +232,7 @@
                             <a href="#" class="btn btn-light btn_teal" onclick="redirectToTour(4)">Detaylar</a>
                         </div>
                     </div>
-                </div>--%>
+                </div>
             </div>
         </div>
     </section>
