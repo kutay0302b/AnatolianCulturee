@@ -5,7 +5,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="Server">
     <style>
         .card-custom {
-            border: 1px solid #212529;
+            border: 1px solid #d4d4d4;
             border-radius: 8px;
             overflow: hidden;
             width: 100%;
@@ -102,7 +102,7 @@
                     int buttonId = 1;
                     foreach (var tour in FilteredTours)
                     { %>
-            <div class="card card-custom">
+            <div class="card card-custom"  data-aos="fade-up">
                 <img src="<%= GetPhotoPath(tour.TurPhoto) %>" class="card-img-top" alt="<%= tour.TurName %>">
                 <div class="card-body">
                     <div></div>

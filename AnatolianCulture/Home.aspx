@@ -20,6 +20,17 @@
         .swiper-slide img {
             filter: brightness(0.7);
         }
+
+        /*        .card {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.card.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+}*/
     </style>
 
     <%--header--%>
@@ -63,7 +74,7 @@
     </section>
 
     <%--hizmetlerimiz--%>
-    <section class="pt-5 pb-5" style="min-height: 604px;">
+    <%--    <section class="pt-5 pb-5" style="min-height: 604px;">
         <div class="container">
             <div class="row">
                 <div class="col-6">
@@ -150,6 +161,70 @@
                 </div>
             </div>
         </div>
+    </section>--%>
+
+    <section class="pt-5 pb-5" style="min-height: 604px;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <div class="card" data-aos="fade-up">
+                        <img class="img-fluid" alt="100%x280" src="Images/kisiye_ozel_tur-scaled.webp">
+                        <div class="card-body">
+                            <h4 class="card-title">Kişiye Özel Tur Tasarımı</h4>
+                            <p class="card-text">Kişilerin ilgilerini ve tüm konforunu gözeterek planlanan tur programı demektir, bunun için destinasyon yönetimine önem veriyoruz.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="card" data-aos="fade-up">
+                        <img class="img-fluid" alt="100%x280" src="Images/bilet-scaled.webp">
+                        <div class="card-body">
+                            <h4 class="card-title">Uçak Bileti Rezervasyonları</h4>
+                            <p class="card-text">Havayolları ile yapmış olduğumuz anlaşmalar dolayısıyla seyahatiniz için en uygun uçak biletini sunuyoruz.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="card" data-aos="fade-up">
+                        <img class="img-fluid" alt="100%x280" src="Images/otel-scaled.webp">
+                        <div class="card-body">
+                            <h4 class="card-title" style="font-size: 22px;">Yurtiçi ve Yurtdışı Otel Rezervasyonları</h4>
+                            <p class="card-text">Uzun yılların vermiş olduğu birikim ile istemiş olduğunuz özelliklere uygun otellere sizin için rezervasyonunuzu yapıyoruz.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <div class="card" data-aos="fade-up">
+                        <img class="img-fluid" alt="100%x280" src="Images/transfeler-scaled.webp">
+                        <div class="card-body">
+                            <h4 class="card-title" style="font-size: 20px">Özel Araç, Helikopter ve Tekne Trasnfer Hizmetleri</h4>
+                            <p class="card-text">Seyahatlerinizde size özel lüks ayrıcalıkları yaşamanız için , ulaşımınıza konfor katacak transfer araçları sağlıyoruz.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="card" data-aos="fade-up">
+                        <img class="img-fluid" alt="100%x280" src="Images/pasaport-scaled.webp">
+                        <div class="card-body">
+                            <h4 class="card-title">Vize İşlemleri </h4>
+                            <p class="card-text">Profesyonel Vize Danışmanlarımız ile vize başvurularınızı ve yurtdışı çıkış vergilerinizi en kısa sürede gerçekleştiriyoruz.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="card" data-aos="fade-up">
+                        <img class="img-fluid" alt="100%x280" src="Images/organizasyon-scaled.webp">
+                        <div class="card-body">
+                            <h4 class="card-title">Kurumsal Etkinlik Yönetimi</h4>
+                            <p class="card-text">Etkinlik ve toplantı projelerimizi, her kurumun farklı bir kimliği, duruşu ve yaklaşımları olduğu bilinci ile planlıyoruz.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
     </section>
 
     <!-- Swiper Container -->
@@ -180,7 +255,7 @@
             </div>
         </div>
     </section>
-  
+
 
     <%--#81CFCB--%>
     <%--turlar--%>
@@ -188,7 +263,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm mb-3">
-                    <div class="card">
+                    <div class="card" data-aos="fade-up">
                         <img src="Images/tur1.webp" class="card-img-top" alt="Yurtiçi Turlar">
                         <h4 class="card-title">Yurtiçi Turlar</h4>
                         <div class="card-overlay">
@@ -201,7 +276,7 @@
 
                 </div>
                 <div class="col-sm mb-3">
-                    <div class="card">
+                    <div class="card" data-aos="fade-up">
                         <img src="Images/tur2.webp" class="card-img-top" alt="Yurtdışı Turlar">
                         <h4 class="card-title">Yurtdışı Turlar</h4>
                         <div class="card-overlay">
@@ -212,7 +287,7 @@
                     </div>
                 </div>
                 <div class="col-sm mb-3">
-                    <div class="card">
+                    <div class="card" data-aos="fade-up">
                         <img src="Images/tur3.webp" class="card-img-top" alt="İstanbul Turları">
                         <h4 class="card-title">İstanbul Turları</h4>
                         <div class="card-overlay">
@@ -223,7 +298,7 @@
                     </div>
                 </div>
                 <div class="col-sm mb-3">
-                    <div class="card">
+                    <div class="card" data-aos="fade-up">
                         <img src="Images/tur4.webp" class="card-img-top" alt="İnteraktif" style="">
                         <h4 class="card-title">İnteraktif</h4>
                         <div class="card-overlay">
@@ -307,6 +382,30 @@
             var coords = '0% ' + -(scrolled * 0.5) + 'px';
             parallax.style.backgroundPosition = coords;
         });
+
+
+      
+
+        //document.addEventListener('DOMContentLoaded', () => {
+        //    const cards = document.querySelectorAll('.card');
+
+        //    const onScroll = () => {
+        //        const triggerBottom = window.innerHeight * 0.85; // Görünürlük tetikleyici alt sınır
+        //        cards.forEach(card => {
+        //            const cardTop = card.getBoundingClientRect().top;
+        //            if (cardTop < triggerBottom) {
+        //                card.classList.add('fade-in');
+        //            } else {
+        //                card.classList.remove('fade-in');
+        //            }
+        //        });
+        //    };
+
+        //    window.addEventListener('scroll', onScroll);
+
+        //    // İlk yüklemede kontrol
+        //    onScroll();
+        //});
 
     </script>
 

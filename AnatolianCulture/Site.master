@@ -18,7 +18,8 @@
     <link href="Content/style.css" rel="stylesheet" />
     <link href="Content/CalendarCss.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
-
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
 
     <link href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
@@ -213,6 +214,8 @@
                 $(target).toggleClass("show");
             });
         });
+
+        AOS.init();
 
     </script>
 </body>
