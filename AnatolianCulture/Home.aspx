@@ -21,16 +21,16 @@
             filter: brightness(0.7);
         }
 
-        /*        .card {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.5s ease, transform 0.5s ease;
-}
+        /* .overlay-animation {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
 
-.card.fade-in {
-    opacity: 1;
-    transform: translateY(0);
-}*/
+            .overlay-animation.fade-in {
+                opacity: 1;
+                transform: translateY(0);
+            }*/
     </style>
 
     <%--header--%>
@@ -233,36 +233,45 @@
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
                     <img src="Images/new-slider-1.jpg" />
-                    <div class="text-overlay">
+                    <div class="text-overlay overlay-animation">
                         <h2>TRAKYA'DA</h2>
                         <h3>BAĞ BOZUMU</h3>
+                        <div class="mt-3">
+                            <button class="btn btn-success btn_teal set-color">inceleyin</button>
+                        </div>
                     </div>
                 </div>
                 <div class="swiper-slide">
                     <img src="Images/new-slider-2.jpg" />
-                    <div class="text-overlay">
+                    <div class="text-overlay overlay-animation">
                         <h2>BÜYÜK ADA'DA</h2>
                         <h3>KÜLTÜR YÜRÜYÜŞÜ</h3>
+                        <div class="mt-3">
+                            <button class="btn btn-success btn_teal set-color">inceleyin</button>
+                        </div>
                     </div>
                 </div>
                 <div class="swiper-slide">
                     <img src="Images/new-slider-3.jpg" />
-                    <div class="text-overlay">
+                    <div class="text-overlay overlay-animation">
                         <h2>DİĞER ETKİNLİK</h2>
                         <h3>ÖRNEK BAŞLIK</h3>
+                        <div class="mt-3">
+                            <button class="btn btn-success btn_teal set-color">inceleyin</button>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-
-    <%--#81CFCB--%>
+    <%--<div class="col-sm mb-3">--%>
+    <%--#33b3a6--%>
     <%--turlar--%>
     <section class="pt-5 pb-5 card-hover-section">
         <div class="container">
             <div class="row">
-                <div class="col-sm mb-3">
+                <div class="col-md-3 mb-3">
                     <div class="card" data-aos="fade-up">
                         <img src="Images/tur1.webp" class="card-img-top" alt="Yurtiçi Turlar">
                         <h4 class="card-title">Yurtiçi Turlar</h4>
@@ -272,10 +281,8 @@
                             <a href="#" class="btn btn-light btn_teal" onclick="redirectToTour(1)">Detaylar</a>
                         </div>
                     </div>
-
-
                 </div>
-                <div class="col-sm mb-3">
+                <div class="col-md-3 mb-3">
                     <div class="card" data-aos="fade-up">
                         <img src="Images/tur2.webp" class="card-img-top" alt="Yurtdışı Turlar">
                         <h4 class="card-title">Yurtdışı Turlar</h4>
@@ -286,7 +293,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-sm mb-3">
+                <div class="col-md-3 mb-3">
                     <div class="card" data-aos="fade-up">
                         <img src="Images/tur3.webp" class="card-img-top" alt="İstanbul Turları">
                         <h4 class="card-title">İstanbul Turları</h4>
@@ -297,7 +304,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-sm mb-3">
+                <div class="col-md-3 mb-3">
                     <div class="card" data-aos="fade-up">
                         <img src="Images/tur4.webp" class="card-img-top" alt="İnteraktif" style="">
                         <h4 class="card-title">İnteraktif</h4>
@@ -342,17 +349,33 @@
             direction: 'vertical',  // Dikey kaydırma
             loop: true,             // Sonsuz döngü
             autoplay: {
-                delay: 4000,        // 4 saniyede bir kaydırma
+                delay: 999999999,        // 4 saniyede bir kaydırma
                 disableOnInteraction: false, // Kullanıcı müdahale ettiğinde durmasın
             },
             speed: 1500,            // Geçiş hızını 1.5 saniye yap
             allowTouchMove: false,  // Kullanıcının kaydırmasını engelle
             breakpoints: {
                 640: {
-                    allowTouchMove: false // Ekran genişliği 640px'den küçükse kaydırmaya izin ver
+                    allowTouchMove: true // Ekran genişliği 640px'den küçükse kaydırmaya izin ver
+                }
+            },
+            on: {
+                slideChangeTransitionStart: () => {
+                    // Tüm overlay-animation sınıflarını sıfırla
+                    document.querySelectorAll('.overlay-animation').forEach(el => {
+                        el.classList.remove('fade-in');
+                    });
+                },
+                slideChangeTransitionEnd: () => {
+                    // Aktif slaydın overlay-animation sınıfına fade-in ekle
+                    const activeSlide = document.querySelector('.swiper-slide-active .overlay-animation');
+                    if (activeSlide) {
+                        activeSlide.classList.add('fade-in');
+                    }
                 }
             }
         });
+
 
 
 
@@ -384,7 +407,7 @@
         });
 
 
-      
+
 
         //document.addEventListener('DOMContentLoaded', () => {
         //    const cards = document.querySelectorAll('.card');

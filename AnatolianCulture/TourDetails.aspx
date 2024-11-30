@@ -26,7 +26,7 @@
             }*/
 
         #v-pills-tab .nav-link {
-            padding: 0.8em 1.8em;
+            padding: 0.5em 0.5em;
             border: 2px solid #17C3B2;
             position: relative;
             overflow: hidden;
@@ -131,7 +131,7 @@
 
                 <!-- diğer Görünen Yatay Sekmeler -->
 
-                <div class="d-flex align-items-start">
+                <div class="d-flex align-items-start" style="margin-top: 30px;">
                     <div class="nav flex-column nav-pills me-3 d-none d-md-flex" style="gap: 30px;" id="v-pills-tab" role="tablist"
                         aria-orientation="vertical">
                         <button class="nav-link active btnTab" id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true">Tur Programı</button>
@@ -227,7 +227,7 @@
                                                 foreach (var service in turInServices)
                                                 { %>
                                     <li class="included">
-                                        <span class="icon"></span>
+                                        <span class="icon">✔</span>
                                         <%= service %>
                                     </li>
                                     <%         }
@@ -246,7 +246,7 @@
                                                 foreach (var service in turOutServices)
                                                 { %>
                                     <li class="excluded">
-                                        <span class="icon"></span>
+                                        <span class="icon">✘</span>
                                         <%= service %>
                                     </li>
                                     <%         }
