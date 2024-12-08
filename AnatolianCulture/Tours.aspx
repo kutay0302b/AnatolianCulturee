@@ -48,7 +48,7 @@
             .card-custom .price {
                 font-size: 1.5rem;
                 font-weight: bold;
-                margin:0;
+                margin: 0;
             }
 
             .card-custom .btn-custom {
@@ -71,7 +71,7 @@
         @media (max-width: 768px) {
             .card-custom {
                 width: 80%;
-               /* max-width: none;*/
+                /* max-width: none;*/
                 transform: none !important;
             }
 
@@ -90,11 +90,29 @@
                 margin-bottom: 20px;
             }
         }
+
+        .banner {
+            width: 100%;
+            max-height: 300px;
+            overflow: hidden;
+        }
+
+            .banner img {
+                width: 100%;
+                height: auto;
+                max-height: 300px;
+                object-fit: cover;
+            }
     </style>
     <section style="height: 111px; background: #0a0a09;"></section>
-    <section style="background-color: #f4f3f3; padding: 30px 0 20px 0;">
+    <section style="background-color: #f4f3f3; padding: 0px 0 20px 0;">
+        <div class="banner">
+            <img id="randomImage" src="" alt="Banner Görseli">
+        </div>
+
+
         <div class="text-center">
-            <h1>TURLARIMIZ</h1>
+            <h1 style="margin-top: 50px; margin-bottom: 45px; font-weight:bold">TURLARIMIZ</h1>
         </div>
         <div class="container tour-container">
             <% if (FilteredTours != null && FilteredTours.Count > 0)
@@ -102,7 +120,7 @@
                     int buttonId = 1;
                     foreach (var tour in FilteredTours)
                     { %>
-            <div class="card card-custom"  data-aos="fade-up">
+            <div class="card card-custom" data-aos="fade-up">
                 <img src="<%= GetPhotoPath(tour.TurPhoto) %>" class="card-img-top" alt="<%= tour.TurName %>">
                 <div class="card-body">
                     <div></div>
@@ -110,9 +128,10 @@
                     <h6 class="card-subtitle mb-2">Yurtiçi Turlar</h6>
                     <p class="card-text"><%= tour.TurAciklama %></p>
                 </div>
-                <div class="card-footer" style="display: flex; align-items: center; justify-content: space-around;">
+                <div class="card-footer" style="display: flex; align-items: center; justify-content: space-around; background-color: #33b3a6">
                     <p class="price"><%= tour.TurFiyat %></p>
-                    <a href="#" class="btn btn-custom" onclick="redirectToDetails(<%= tour.ID %>, <%= tour.TurType %>)">Detaylar</a>
+                    <%--<a href="#" class="btn btn-custom" onclick="redirectToDetails(<%= tour.ID %>, <%= tour.TurType %>)">Detaylar</a>--%>
+                    <a href="#" class="btn btn-outline-light" onclick="redirectToDetails(<%= tour.ID %>, <%= tour.TurType %>)">Detaylar</a>
                 </div>
             </div>
 
@@ -131,6 +150,20 @@
         function redirectToDetails(tourId, tourType) {
             window.location.href = "TourDetails.aspx?tour=" + tourId + "&type=" + tourType;
         }
+
+        const images = [
+            "Images/slider-1.jpg",
+            "Images/slider-2.jpg",
+            "Images/slider-3.jpg"
+        ];
+
+        // Rastgele bir resim seçmek için
+        const randomIndex = Math.floor(Math.random() * images.length);
+        const randomImage = images[randomIndex];
+
+        // Resim kaynağını (src) rastgele seçilen resimle güncelle
+        document.getElementById("randomImage").src = randomImage;
+
     </script>
 </asp:Content>
 

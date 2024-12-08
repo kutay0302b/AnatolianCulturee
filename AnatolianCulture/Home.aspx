@@ -40,8 +40,8 @@
 
             <div class="header-search">
                 <div style="display: grid; align-content: space-around; row-gap: 20px;">
-                    <h1>Yolculuk Nereye?</h1>
-                    <input class="form-control" id="nameSearch" runat="server" type="search" name="name" value="" placeholder="Nereye gitmek istersiniz?" />
+                    <h1 style="font-weight: bold; color: white;">Yolculuk Nereye?</h1>
+                    <input class="form-control" id="nameSearch" runat="server" type="search" name="name" value="" style="height: 55px" placeholder="Nereye gitmek istersiniz?" />
                 </div>
                 <div class="header-serach-box">
                     <div class="deneme">
@@ -237,7 +237,8 @@
                         <h2>TRAKYA'DA</h2>
                         <h3>BAĞ BOZUMU</h3>
                         <div class="mt-3">
-                            <button class="btn btn-success btn_teal set-color">inceleyin</button>
+                            <button class="btn btn-outline-light" style="font-size: 25px; padding: 10px 30px; border: 2px solid white;">
+                                inceleyin</button>
                         </div>
                     </div>
                 </div>
@@ -247,7 +248,8 @@
                         <h2>BÜYÜK ADA'DA</h2>
                         <h3>KÜLTÜR YÜRÜYÜŞÜ</h3>
                         <div class="mt-3">
-                            <button class="btn btn-success btn_teal set-color">inceleyin</button>
+                            <button class="btn btn-outline-light" style="font-size: 25px; padding: 10px 30px; border: 2px solid white;">
+                                inceleyin</button>
                         </div>
                     </div>
                 </div>
@@ -257,7 +259,8 @@
                         <h2>DİĞER ETKİNLİK</h2>
                         <h3>ÖRNEK BAŞLIK</h3>
                         <div class="mt-3">
-                            <button class="btn btn-success btn_teal set-color">inceleyin</button>
+                            <button class="btn btn-outline-light" style="font-size: 25px; padding: 10px 30px; border: 2px solid white;">
+                                inceleyin</button>
                         </div>
                     </div>
                 </div>
