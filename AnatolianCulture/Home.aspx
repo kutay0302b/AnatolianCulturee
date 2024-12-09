@@ -322,7 +322,26 @@
         </div>
     </section>
 
+    <section style="background-color: #0a0a09">
+        <div class="container-fluid py-3" style="color: white; height: auto;">
+            <div class="row align-items-center">
+                <!-- Başlık Bölümü -->
+                <div class="col-12 col-md-6 text-center mb-3 mb-md-0">
+                    <h3>Haberdar olmak ister misiniz?</h3>
+                </div>
+                <!-- Form Bölümü -->
+                <div class="col-12 col-md-6 d-flex flex-column flex-md-row align-items-center">
+                    <div class="col-12 col-md-8 mb-2 mb-md-0 px-md-2">
+                        <input id="txtMail" type="email" class="form-control" runat="server" placeholder="E-posta Adresi:" />
+                    </div>
+                    <div class="col-12 col-md-4 text-center px-md-2">
+                        <asp:Button Text="Gönder" runat="server" ID="sendMailBtn" CssClass="btn btn-success btn_teal w-100" OnClick="sendMailBtn_Click" />
+                    </div>
+                </div>
+            </div>
+        </div>
 
+    </section>
 
 
     <button class="Btn" onclick="openWp()">
