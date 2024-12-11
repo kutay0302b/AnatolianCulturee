@@ -226,8 +226,8 @@
         display: flex;
         flex-direction: column;
         justify-content: space-around;
-        background-color: #ffffff;
-        border: 1px solid black;
+        /*background-color: #ffffff;*/
+        border: 1px solid lightgray;
     }
 }
 
@@ -313,7 +313,7 @@
         display: flex;
         flex-direction: column;
         justify-content: space-around;
-        background-color: #ffffff;
+        /*background-color: #ffffff;*/
         border: 1px solid black;
     }
 }
@@ -405,8 +405,8 @@
         display: flex;
         flex-direction: column;
         justify-content: space-around;
-        background-color: #ffffff;
-        border: 1px solid black;
+        /*background-color: #ffffff;*/
+        border: 1px solid lightgray;
     }
 
         .aside-content input {
@@ -514,8 +514,8 @@
         display: flex;
         flex-direction: column;
         justify-content: space-around;
-        background-color: #ffffff;
-        border: 1px solid black;
+        /*background-color: #ffffff;*/
+        border: 1px solid lightgray;
     }
 
         .aside-content input {

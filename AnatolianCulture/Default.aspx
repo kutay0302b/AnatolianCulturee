@@ -11,8 +11,8 @@
 
         .accordion-button {
             background-color: #ECEFF1;
-            /*color: #29cdcd;*/
-            font-weight: bold;
+            /*color: #29cdcd;
+            font-weight: bold;*/
             font-size: 25px;
             border: none;
             border-bottom: 2px solid #29cdcd;
@@ -47,10 +47,46 @@
             box-shadow: none !important;
             outline: none !important;
         }
+
+
+
+      
+
+      
+
+        .workshop-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #ddd;
+            padding: 10px 0;
+        }
+
+        .workshop-item img {
+            width: 80px;
+            height: 80px;
+            border-radius: 8px;
+        }
+
+        .workshop-info {
+            display: flex;
+            flex-direction: column;
+            margin-left: 15px;
+        }
+
+        .workshop-time {
+            color: #6c757d;
+            font-size: 0.9rem;
+        }
+
+        .workshop-title {
+            font-weight: bold;
+        }
+  
     </style>
     <section style="height: 111px; background: #0a0a09;"></section>
     <section>
-        <div class="container mt-5 mb-5">
+       <%-- <div class="container mt-5 mb-5">
             <div class="accordion accordion-flush" id="accordionFlushExample">
                 <div class="accordion-item">
                     <h2 class="accordion-header">
@@ -83,8 +119,94 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div>--%>
 
+    </section>
+
+    <section>
+          <div class="container my-4">
+        <div class="accordion" id="accordionWorkshops">
+            <!-- Aralık 2024 -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingDecember">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseDecember" aria-expanded="true" aria-controls="collapseDecember">
+                        Aralık 2024
+                    </button>
+                </h2>
+                <div id="collapseDecember" class="accordion-collapse collapse show" aria-labelledby="headingDecember" data-bs-parent="#accordionWorkshops">
+                    <div class="accordion-body">
+                        <!-- 13 Aralık -->
+                        <div class="mb-4">
+                            <div class="text-muted mb-2">13 Aralık Cuma</div>
+                            <div class="workshop-item">
+                                <div class="d-flex">
+                                    <img src="https://placehold.co/80x80" alt="Kış Kahvesi">
+                                    <div class="workshop-info">
+                                        <div class="workshop-title">Kış Kahvesi</div>
+                                        <div class="workshop-time">10:00 - 15:00</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="workshop-item">
+                                <div class="d-flex">
+                                    <img src="https://placehold.co/80x80"" alt="Sushi">
+                                    <div class="workshop-info">
+                                        <div class="workshop-title">Sushi</div>
+                                        <div class="workshop-time">19:00 - 23:00</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 14 Aralık -->
+                        <div class="mb-4">
+                            <div class="text-muted mb-2">14 Aralık Cumartesi</div>
+                            <div class="workshop-item">
+                                <div class="d-flex">
+                                    <img src="https://placehold.co/80x80" alt="Yılbaşı Çikolataları">
+                                    <div class="workshop-info">
+                                        <div class="workshop-title">Yılbaşı Çikolataları</div>
+                                        <div class="workshop-time">10:00 - 14:00</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="workshop-item">
+                                <div class="d-flex">
+                                    <img src="https://placehold.co/80x80" alt="Kokteyl Kahveler">
+                                    <div class="workshop-info">
+                                        <div class="workshop-title">Kokteyl Kahveler</div>
+                                        <div class="workshop-time">10:00 - 15:00</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="workshop-item">
+                                <div class="d-flex">
+                                    <img src="https://placehold.co/80x80" alt="Artizan Ekmekler ve Sandviçler">
+                                    <div class="workshop-info">
+                                        <div class="workshop-title">Artizan Ekmekler ve Sandviçler</div>
+                                        <div class="workshop-time">10:00 - 16:00</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ocak 2025 -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingJanuary">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseJanuary" aria-expanded="false" aria-controls="collapseJanuary">
+                        Ocak 2025
+                    </button>
+                </h2>
+                <div id="collapseJanuary" class="accordion-collapse collapse" aria-labelledby="headingJanuary" data-bs-parent="#accordionWorkshops">
+                    <div class="accordion-body">
+                        <p>Ocak ayı workshop bilgileri henüz eklenmedi.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     </section>
 
 </asp:Content>
