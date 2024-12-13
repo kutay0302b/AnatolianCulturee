@@ -335,7 +335,7 @@
                         <input id="txtMail" type="email" class="form-control" runat="server" placeholder="E-posta Adresi:" />
                     </div>
                     <div class="col-12 col-md-4 text-center px-md-2">
-                        <asp:Button Text="Gönder" runat="server" ID="sendMailBtn" CssClass="btn btn-success btn_teal w-100" OnClick="sendMailBtn_Click" />
+                        <asp:Button Text="Gönder" runat="server" ID="sendMailBtn" CssClass="btn btn-success btn_teal w-100" OnClick="sendMailBtn_Click" Style="max-width: 50%;" />
                     </div>
                 </div>
             </div>

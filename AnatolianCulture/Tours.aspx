@@ -49,6 +49,7 @@
                 font-size: 1.5rem;
                 font-weight: bold;
                 margin: 0;
+                color:white;
             }
 
             .card-custom .btn-custom {

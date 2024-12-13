@@ -26,18 +26,18 @@
             }*/
 
         #v-pills-tab .nav-link {
-padding: 0.8em 0.7em;
-    border: 2px solid #17C3B2;
-    position: relative;
-    overflow: hidden;
-    background-color: transparent;
-    text-align: center;
-    text-transform: uppercase;
-    font-size: 15px;
-    transition: .3s;
-    z-index: 1;
-    font-family: inherit;
-    color: #000;
+            padding: 0.8em 0.7em;
+            border: 2px solid #17C3B2;
+            position: relative;
+            overflow: hidden;
+            background-color: transparent;
+            text-align: center;
+            text-transform: uppercase;
+            font-size: 15px;
+            transition: .3s;
+            z-index: 1;
+            font-family: inherit;
+            color: #000;
         }
 
             #v-pills-tab .nav-link::before {
@@ -85,7 +85,7 @@ padding: 0.8em 0.7em;
             align-items: center;
             border: 1px solid lightgray;
             padding: 20px;
-            border-radius: 1.5rem;
+            border-radius: .35rem;
         }
 
 
@@ -146,10 +146,10 @@ padding: 0.8em 0.7em;
                                 <%--<img src="Images/MARDIN-TURU-300x300.webp" class="card-img-top" alt="tur">--%>
                                 <div class="detail-container-main">
                                     <% if (FilteredContents != null && FilteredContents.Count > 0)
-    {
-        int dayCount = 1;
-        foreach (var content in FilteredContents)
-        { %>
+                                        {
+                                            int dayCount = 1;
+                                            foreach (var content in FilteredContents)
+                                            { %>
                                     <div class="detail-content">
                                         <%--   <div style="width: 50%; margin-left: 320px;">--%>
                                         <div>
@@ -164,11 +164,11 @@ padding: 0.8em 0.7em;
                                         </div>
                                     </div>
                                     <% 
-            dayCount++;
-        }
-    }
-    else
-    { %>
+                                                  dayCount++;
+                                              }
+                                          }
+                                          else
+                                          { %>
                                     <h1>Mevcut tur bulunmamaktadır. Takipte kalın!</h1>
                                     <% } %>
                                 </div>
@@ -220,38 +220,38 @@ padding: 0.8em 0.7em;
                                 <h4>Fiyata Dahil Olan Hizmetler</h4>
                                 <ul class="services-list">
                                     <% if (FilteredDetails != null && FilteredDetails.Count > 0)
-    {
-        foreach (var content in FilteredDetails)
-        {
-            var turInServices = content.TurIn.Split('|');
-            foreach (var service in turInServices)
-            { %>
-                                                <li class="included">
-                                                    <span class="icon">&#x2022;</span>
-                                                    <%= service %>
-                                                </li>
-                                                <%         }
-        }
-    }
+                                        {
+                                            foreach (var content in FilteredDetails)
+                                            {
+                                                var turInServices = content.TurIn.Split('|');
+                                                foreach (var service in turInServices)
+                                                { %>
+                                    <li class="included">
+                                        <span class="icon">&#x2022;</span>
+                                        <%= service %>
+                                    </li>
+                                    <%         }
+                                        }
+                                    }
                                     %>
                                 </ul>
 
                                 <h4>Gezi Fiyatına Dahil Olmayan Hizmetler</h4>
                                 <ul class="services-list">
                                     <% if (FilteredDetails != null && FilteredDetails.Count > 0)
-    {
-        foreach (var content in FilteredDetails)
-        {
-            var turOutServices = content.TurOut.Split('|');
-            foreach (var service in turOutServices)
-            { %>
+                                        {
+                                            foreach (var content in FilteredDetails)
+                                            {
+                                                var turOutServices = content.TurOut.Split('|');
+                                                foreach (var service in turOutServices)
+                                                { %>
                                     <li class="excluded">
                                         <span class="icon">&#x2022;</span>
                                         <%= service %>
                                     </li>
                                     <%         }
-        }
-    }
+                                        }
+                                    }
                                     %>
                                 </ul>
                             </div>
@@ -286,45 +286,45 @@ padding: 0.8em 0.7em;
     </section>
 
     <script>  
-    // Rastgele resimleri tanımlıyoruz
-    const images = [
-        "Images/slider-1.jpg",
-        "Images/slider-2.jpg",
-        "Images/slider-3.jpg"
-    ];
+        // Rastgele resimleri tanımlıyoruz
+        const images = [
+            "Images/slider-1.jpg",
+            "Images/slider-2.jpg",
+            "Images/slider-3.jpg"
+        ];
 
-    // Rastgele bir resim seçmek için
-    const randomIndex = Math.floor(Math.random() * images.length);
-    const randomImage = images[randomIndex];
+        // Rastgele bir resim seçmek için
+        const randomIndex = Math.floor(Math.random() * images.length);
+        const randomImage = images[randomIndex];
 
-    // Resim kaynağını (src) rastgele seçilen resimle güncelle
-    document.getElementById("randomImage").src = randomImage;
+        // Resim kaynağını (src) rastgele seçilen resimle güncelle
+        document.getElementById("randomImage").src = randomImage;
 
 
-    document.addEventListener("DOMContentLoaded", function () {
-        const tabContent = document.querySelector(".tab-content");
-        const tabPanes = tabContent.querySelectorAll(".tab-pane");
+        document.addEventListener("DOMContentLoaded", function () {
+            const tabContent = document.querySelector(".tab-content");
+            const tabPanes = tabContent.querySelectorAll(".tab-pane");
 
-        function setTabContentWidth() {
-            let maxWidth = 0;
+            function setTabContentWidth() {
+                let maxWidth = 0;
 
-            // Tüm sekme içeriklerinin genişliğini ölç
-            tabPanes.forEach(tabPane => {
-                tabPane.style.display = "block"; // Genişlik ölçümü için geçici olarak görünür yap
-                maxWidth = Math.max(maxWidth, tabPane.scrollWidth);
-                tabPane.style.display = ""; // Eski görünürlüğü geri yükle
+                // Tüm sekme içeriklerinin genişliğini ölç
+                tabPanes.forEach(tabPane => {
+                    tabPane.style.display = "block"; // Genişlik ölçümü için geçici olarak görünür yap
+                    maxWidth = Math.max(maxWidth, tabPane.scrollWidth);
+                    tabPane.style.display = ""; // Eski görünürlüğü geri yükle
+                });
+
+                // Maksimum genişliği tüm sekmelere uygula
+                tabContent.style.width = maxWidth + "px";
+            }
+
+            // Sayfa yüklendiğinde ve sekme değiştirildiğinde çalıştır
+            setTabContentWidth();
+            document.querySelectorAll('[data-bs-toggle="pill"]').forEach(tab => {
+                tab.addEventListener("shown.bs.tab", setTabContentWidth);
             });
-
-            // Maksimum genişliği tüm sekmelere uygula
-            tabContent.style.width = maxWidth + "px";
-        }
-
-        // Sayfa yüklendiğinde ve sekme değiştirildiğinde çalıştır
-        setTabContentWidth();
-        document.querySelectorAll('[data-bs-toggle="pill"]').forEach(tab => {
-            tab.addEventListener("shown.bs.tab", setTabContentWidth);
         });
-    });
 
     </script>
 </asp:Content>

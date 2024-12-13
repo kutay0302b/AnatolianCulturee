@@ -41,42 +41,37 @@
     </asp:ContentPlaceHolder>
 
     <style>
-        /* Genel Ayarlar */
 
 
-hr {
-    border: 0;
-    border-top: 2px solid #29cdcd;
-    margin: 10px 0;
-}
+/*        hr {
+            border: 0;
+            border-top: 2px solid #29cdcd;
+            margin: 10px 0;
+        }
 
-/* Horizontal HR (Başlık Altı) */
-.horizontal-hr {
-    width: 60px;
-    background-color: #29cdcd;
-    height: 2px;
-}
+        .horizontal-hr {
+            width: 60px;
+            background-color: #29cdcd;
+            height: 2px;
+        }
 
-/* Vertical HR */
-.vertical-hr {
-    height: 100%;
-    border: 0;
-    border-left: 2px solid #29cdcd;
-    width: 2px;
-}
+        .vertical-hr {
+            height: 100%;
+            border: 0;
+            border-left: 2px solid #29cdcd;
+            width: 2px;
+        }
 
-/* Mobil Görünümde Dikey HR'ların Konumu */
-@media (max-width: 768px) {
-    .vertical-hr {
-        display: none;
-    }
+        @media (max-width: 768px) {
+            .vertical-hr {
+                display: none;
+            }
 
-    .horizontal-hr {
-        margin-top: 20px;
-        margin-bottom: 20px;
-    }
-}
-
+            .horizontal-hr {
+                margin-top: 20px;
+                margin-bottom: 20px;
+            }
+        }*/
     </style>
 </head>
 
@@ -147,29 +142,25 @@ hr {
             </asp:ContentPlaceHolder>
 
             <footer class="text-center text-lg-start text-dark" style="background-color: #ECEFF1">
-                <!-- Üst bölüm -->
                 <section class="d-flex justify-content-between p-2 text-white" style="background-color: #0a0a09"></section>
 
-                <!-- Ana içerik -->
                 <section>
                     <div class="container text-center text-md-start mt-5">
-                        <!-- Fotoğraf -->
                         <div class="row justify-content-center mb-4">
                             <div class="col-12 col-md-6">
-                                <img src="Images/logo-renkli.webp" alt="menu" class="img-fluid mx-auto d-block">
+                                <img src="Images/Varlık.svg" alt="menu" class="img-fluid mx-auto d-block" style="max-width: 60%;">
                             </div>
                         </div>
 
-                        <!-- İletişim Bilgileri -->
                         <div class="row align-items-center">
-                            <!-- Sol hr -->
                             <div class="col-12 col-md-2 d-none d-md-flex justify-content-end">
-                                <hr class="vertical-hr">
+                                <div class="text-success">
+                                    <hr>
+                                </div>
                             </div>
 
-                            <!-- İletişim Başlık ve İçerik -->
                             <div class="col-12 col-md-8 text-center">
-                               <%-- <h6 class="text-uppercase fw-bold">İletişim</h6>
+                                <%-- <h6 class="text-uppercase fw-bold">İletişim</h6>
                                 <hr class="mb-4 mt-0 mx-auto horizontal-hr" />--%>
                                 <div class="d-flex flex-column flex-md-row justify-content-center align-items-center">
                                     <p class="mx-md-3"><i class="fa fa-home mr-3"></i>Zühtüpaşa mah. Bağdat cad. No32/103 Kızıltoprak-İstanbul</p>
@@ -184,9 +175,10 @@ hr {
                                 </div>
                             </div>
 
-                            <!-- Sağ hr -->
                             <div class="col-12 col-md-2 d-none d-md-flex justify-content-start">
-                                <hr class="vertical-hr">
+                                <div class="text-success">
+                                    <hr>
+                                </div>
                             </div>
                         </div>
                     </div>
