@@ -31,16 +31,34 @@
                 opacity: 1;
                 transform: translateY(0);
             }*/
+
+        .body-height {
+            height: 150px;
+        }
+
+        .home-photo {
+            background-image: url('Images/home-photo-2.png');
+            /*background-image: url('Images/mardin.jpg');*/
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            background-attachment: fixed;
+            position: relative;
+            background-position: 0% 0px;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
     </style>
 
     <%--header--%>
     <section>
-        <div id="intro" class="bg-image vh-100 parallax" style="background-image: url('Images/mardin.jpg'); display: flex; justify-content: center; flex-wrap: wrap; background-attachment: fixed; position: relative;">
+<%--        <div id="intro" class="bg-image vh-100 parallax" style="background-image: url('Images/anasayfa_p.png'); display: flex; justify-content: center; flex-wrap: wrap; background-attachment: fixed; position: relative;">--%>
+        <div id="intro" class="bg-image vh-100 parallax home-photo">
             <div class="mask" style="background-color: rgba(250, 182, 162, 0.15);"></div>
 
             <div class="header-search">
                 <div style="display: grid; align-content: space-around; row-gap: 20px;">
-                    <h1 style="font-weight: bold; color: white;">Yolculuk Nereye?</h1>
+                    <h1 style="font-weight: bold; color: white; font-size: 4.1rem;">Yolculuk Nereye?</h1>
                     <input class="form-control" id="nameSearch" runat="server" type="search" name="name" value="" style="height: 55px" placeholder="Nereye gitmek istersiniz?" />
                 </div>
                 <div class="header-serach-box">
@@ -166,10 +184,17 @@
     <section class="pt-5 pb-5" style="min-height: 604px;">
         <div class="container">
             <div class="row">
+                   <div class="col-12 text-center">
+                    <h1 class="mb-3">Hizmetlerimiz</h1>
+                </div>
+
+               
+            </div>
+            <div class="row">
                 <div class="col-md-4 mb-3">
                     <div class="card" data-aos="fade-up">
                         <img class="img-fluid" alt="100%x280" src="Images/kisiye_ozel_tur-scaled.webp">
-                        <div class="card-body">
+                        <div class="card-body body-height">
                             <h4 class="card-title">Kişiye Özel Tur Tasarımı</h4>
                             <p class="card-text">Kişilerin ilgilerini ve tüm konforunu gözeterek planlanan tur programı demektir, bunun için destinasyon yönetimine önem veriyoruz.</p>
                         </div>
@@ -178,7 +203,7 @@
                 <div class="col-md-4 mb-3">
                     <div class="card" data-aos="fade-up">
                         <img class="img-fluid" alt="100%x280" src="Images/bilet-scaled.webp">
-                        <div class="card-body">
+                        <div class="card-body body-height">
                             <h4 class="card-title">Uçak Bileti Rezervasyonları</h4>
                             <p class="card-text">Havayolları ile yapmış olduğumuz anlaşmalar dolayısıyla seyahatiniz için en uygun uçak biletini sunuyoruz.</p>
                         </div>
@@ -187,7 +212,7 @@
                 <div class="col-md-4 mb-3">
                     <div class="card" data-aos="fade-up">
                         <img class="img-fluid" alt="100%x280" src="Images/otel-scaled.webp">
-                        <div class="card-body">
+                        <div class="card-body body-height">
                             <h4 class="card-title" style="font-size: 22px;">Yurtiçi ve Yurtdışı Otel Rezervasyonları</h4>
                             <p class="card-text">Uzun yılların vermiş olduğu birikim ile istemiş olduğunuz özelliklere uygun otellere sizin için rezervasyonunuzu yapıyoruz.</p>
                         </div>
@@ -198,7 +223,7 @@
                 <div class="col-md-4 mb-3">
                     <div class="card" data-aos="fade-up">
                         <img class="img-fluid" alt="100%x280" src="Images/transfeler-scaled.webp">
-                        <div class="card-body">
+                        <div class="card-body body-height">
                             <h4 class="card-title" style="font-size: 20px">Özel Araç, Helikopter ve Tekne Trasnfer Hizmetleri</h4>
                             <p class="card-text">Seyahatlerinizde size özel lüks ayrıcalıkları yaşamanız için , ulaşımınıza konfor katacak transfer araçları sağlıyoruz.</p>
                         </div>
@@ -207,7 +232,7 @@
                 <div class="col-md-4 mb-3">
                     <div class="card" data-aos="fade-up">
                         <img class="img-fluid" alt="100%x280" src="Images/pasaport-scaled.webp">
-                        <div class="card-body">
+                        <div class="card-body body-height">
                             <h4 class="card-title">Vize İşlemleri </h4>
                             <p class="card-text">Profesyonel Vize Danışmanlarımız ile vize başvurularınızı ve yurtdışı çıkış vergilerinizi en kısa sürede gerçekleştiriyoruz.</p>
                         </div>
@@ -216,7 +241,7 @@
                 <div class="col-md-4 mb-3">
                     <div class="card" data-aos="fade-up">
                         <img class="img-fluid" alt="100%x280" src="Images/organizasyon-scaled.webp">
-                        <div class="card-body">
+                        <div class="card-body body-height">
                             <h4 class="card-title">Kurumsal Etkinlik Yönetimi</h4>
                             <p class="card-text">Etkinlik ve toplantı projelerimizi, her kurumun farklı bir kimliği, duruşu ve yaklaşımları olduğu bilinci ile planlıyoruz.</p>
                         </div>
@@ -314,7 +339,8 @@
                         <div class="card-overlay">
                             <h4 class="card-title">İnteraktif</h4>
                             <p>14 – 17 Kasım Ata Topraklarına Yolculuk: Balkanlara Doğru</p>
-                            <a href="#" class="btn btn-light btn_teal" onclick="redirectToTour(4)">Detaylar</a>
+                            <%--<a href="#" class="btn btn-light btn_teal" onclick="redirectToTour(4)">Detaylar</a>--%>
+                            <a href="Interactive.aspx" class="btn btn-light btn_teal">Detaylar</a>
                         </div>
                     </div>
                 </div>
@@ -323,11 +349,11 @@
     </section>
 
     <section style="background-color: #0a0a09">
-        <div class="container-fluid py-3" style="color: white; height: auto;">
+        <div class="container-fluid pt-3" style="color: white; height: auto;">
             <div class="row align-items-center">
                 <!-- Başlık Bölümü -->
                 <div class="col-12 col-md-6 text-center mb-3 mb-md-0">
-                    <h3>Haberdar olmak ister misiniz?</h3>
+                    <h3>Turlarımızdan haberdar olmak ister misiniz?</h3>
                 </div>
                 <!-- Form Bölümü -->
                 <div class="col-12 col-md-6 d-flex flex-column flex-md-row align-items-center">

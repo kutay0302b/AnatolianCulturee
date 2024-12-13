@@ -10,6 +10,9 @@
 .fa-bars,
 .navbar-brand {
     color: white;
+    font-family: "Barlow", serif !important;
+    font-weight: 200 !important;
+    font-style: normal !important;
 }
 
 /* Color of the links AFTER scroll */
@@ -19,6 +22,9 @@
 .navbar-scrolled .fa-bars,
 .navbar-scrolled .navbar-brand {
     color: white;
+    font-family: "Barlow", serif !important;
+    font-weight: 200 !important;
+    font-style: normal !important;
 }
 
 /* Color of the navbar AFTER scroll */
