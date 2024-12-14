@@ -7,9 +7,11 @@
         <div style="background-color: #36B2A8; display: flex; justify-content: center; width: auto; flex-wrap: wrap; align-items: center;">
             <img style="width: 70%;" src="Images/ac-badge.jpg" />
         </div>
-        <div style="display: flex; flex-direction: column; align-items: center; flex-wrap: wrap; min-height: 71.8vh;">
-            <h1>Biz Kimiz</h1>
-            <div class="container">
+        <div class="container-sm" style="display: flex; flex-direction: column; align-items: center; flex-wrap: wrap; min-height: 71.8vh;">
+            <h1 class="my-5">Biz Kimiz</h1>
+
+            <%--ana metin--%>
+            <div class="container-sm" style="max-width: 80%; font-size: 20px;">
                 <p>Anatolian Culture ile birlikte yola çıkmak çeşit çeşit rotalar keşfetmek, bilmediğiniz veya bildiğiniz yerleri farklı bir gözle görüp, deneyimlemek ve dokunmaktır.</p>
 
                 <p>
@@ -25,18 +27,22 @@
 
                 <p>Akılda kalıcı konsept ve rotalar ve  özenle seçilmiş uzmanlar eşliğinde gittiğimiz yerleri görüyor,  hissediyor, kokluyor ve bizi biz yapan gerçekleri anlıyoruz.</p>
             </div>
-            <div class="container">
 
-                <h2>Anatolian Culture’ı farklı ve ayrıcalıklı kılan en temel özellikler,</h2>
+            <%--özellikler--%>
+            <div class="container-sm" style="max-width: 80%;">
+                <h2 class="my-5">Anatolian Culture’ı farklı ve ayrıcalıklı kılan en temel özellikler,</h2>
                 <div class="container" style="display: flex; row-gap: 5px; flex-direction: column; margin-top: 25px; color: #787878;">
 
-                    <h3>En iyi otellerde konaklama</h3>
-                    <h3>Yöresel sofralarda tadım ve lezzetler</h3>
-                    <h3>Konusunda uzmanlaşmış ve seçkin kültür danışmanları eşliğinde rehberlik</h3>
-                    <h3>Zengin ve özgür program içerikleri</h3>
-                    <h3>Organizasyonumuzda misafirlerimizin konforu için verilen kulaklık hizmeti.</h3>
+                    <h3>&#x2022; En iyi otellerde konaklama</h3>
+                    <h3>&#x2022; Yöresel sofralarda tadım ve lezzetler</h3>
+                    <h3>&#x2022; Konusunda uzmanlaşmış ve seçkin kültür danışmanları eşliğinde rehberlik</h3>
+                    <h3>&#x2022; Zengin ve özgür program içerikleri</h3>
+                    <h3>&#x2022; Organizasyonumuzda misafirlerimizin konforu için verilen kulaklık hizmeti.</h3>
                 </div>
             </div>
+
+            <%--faq--%>
+           
         </div>
     </section>
 

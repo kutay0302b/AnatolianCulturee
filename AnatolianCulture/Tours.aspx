@@ -9,20 +9,21 @@
             border-radius: 8px;
             overflow: hidden;
             width: 100%;
-            max-width: 300px;
+            max-width: 400px;
             transition: transform 0.2s ease-in-out;
             margin: 15px;
+            height: 530px;
         }
 
             .card-custom:hover {
-                transform: scale(1.04);
-                z-index: 1;
+                transform: scale(1.04) !important;
+                z-index: 1 !important;
             }
 
             .card-custom img {
                 border-bottom: 1px solid #e0e0e0;
                 width: 100%;
-                height: 270px;
+                height: 330px;
             }
 
             .card-custom .card-body {
@@ -49,7 +50,7 @@
                 font-size: 1.5rem;
                 font-weight: bold;
                 margin: 0;
-                color:white;
+                color: white;
             }
 
             .card-custom .btn-custom {
@@ -69,6 +70,18 @@
             justify-content: center;
         }
 
+        
+        /* .overlay-animation {
+            opacity: 1;
+            transform: translateY(20px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+
+            .overlay-animation.fade-in {
+                opacity: 1;
+                transform: translateY(0);
+            }*/
+
         @media (max-width: 768px) {
             .card-custom {
                 width: 80%;
@@ -80,6 +93,8 @@
                     transform: none !important;
                 }
         }
+
+
 
         @media (max-width: 576px) {
             .tour-container {
@@ -113,7 +128,7 @@
 
 
         <div class="text-center">
-            <h1 style="margin-top: 50px; margin-bottom: 45px; font-weight:bold">TURLARIMIZ</h1>
+            <h1 style="margin-top: 50px; margin-bottom: 45px; font-weight: bold">TURLARIMIZ</h1>
         </div>
         <div class="container tour-container">
             <% if (FilteredTours != null && FilteredTours.Count > 0)
@@ -121,7 +136,7 @@
                     int buttonId = 1;
                     foreach (var tour in FilteredTours)
                     { %>
-            <div class="card card-custom" data-aos="fade-up">
+            <div class="card card-custom overlay-animation" data-aos="fade-up" >
                 <img src="<%= GetPhotoPath(tour.TurPhoto) %>" class="card-img-top" alt="<%= tour.TurName %>">
                 <div class="card-body">
                     <div></div>
