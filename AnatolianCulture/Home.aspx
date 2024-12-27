@@ -64,26 +64,26 @@
                 <div class="header-serach-box">
                     <div class="deneme">
                         <a href="Tours.aspx?child=1">
-                            <img src="Images/family.png" />
-                            <span>Çocuk</span>
+                            <img src="Images/4.svg" />
+                            <span style="color:white">Çocuk</span>
                         </a>
                     </div>
                     <div class="deneme">
                         <a href="Tours.aspx?nature=1">
-                            <img src="Images/nature.png" />
-                            <span>Doğa</span>
+                            <img src="Images/2.svg" />
+                            <span style="color:white">Doğa</span>
                         </a>
                     </div>
                     <div class="deneme">
                         <a href="Tours.aspx?cultural=1">
-                            <img src="Images/theatre.png" />
-                            <span>Kültürel</span>
+                            <img src="Images/1.svg" />
+                            <span style="color:white">Kültürel</span>
                         </a>
                     </div>
                     <div class="deneme">
                         <a href="Tours.aspx?enjoy=1">
-                            <img src="Images/disco.png" />
-                            <span>Keyif</span>
+                            <img src="Images/3.svg" />
+                            <span style="color:white">Keyif</span>
                         </a>
                     </div>
                 </div>

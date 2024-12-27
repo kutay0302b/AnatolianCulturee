@@ -48,12 +48,6 @@
             outline: none !important;
         }
 
-
-
-      
-
-      
-
         .workshop-item {
             display: flex;
             justify-content: space-between;
@@ -62,11 +56,11 @@
             padding: 10px 0;
         }
 
-        .workshop-item img {
-            width: 80px;
-            height: 80px;
-            border-radius: 8px;
-        }
+            .workshop-item img {
+                width: 80px;
+                height: 80px;
+                border-radius: 8px;
+            }
 
         .workshop-info {
             display: flex;
@@ -82,131 +76,133 @@
         .workshop-title {
             font-weight: bold;
         }
-  
     </style>
     <section style="height: 111px; background: #0a0a09;"></section>
-    <section>
-       <%-- <div class="container mt-5 mb-5">
-            <div class="accordion accordion-flush" id="accordionFlushExample">
-                <div class="accordion-item">
-                    <h2 class="accordion-header">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                            Accordion Item #1
-                        </button>
-                    </h2>
-                    <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-                        <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion body.</div>
-                    </div>
-                </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                            Accordion Item #2
-                        </button>
-                    </h2>
-                    <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-                        <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine this being filled with some actual content.</div>
-                    </div>
-                </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-                            Accordion Item #3
-                        </button>
-                    </h2>
-                    <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-                        <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
-                    </div>
-                </div>
-            </div>
-        </div>--%>
+    <section style="min-height: 100vh;">
+        <div class="container my-4">
 
-    </section>
 
-    <section>
-          <div class="container my-4">
-        <div class="accordion" id="accordionWorkshops">
-            <!-- Aralık 2024 -->
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="headingDecember">
-                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseDecember" aria-expanded="true" aria-controls="collapseDecember">
-                        Aralık 2024
-                    </button>
-                </h2>
-                <div id="collapseDecember" class="accordion-collapse collapse show" aria-labelledby="headingDecember" data-bs-parent="#accordionWorkshops">
-                    <div class="accordion-body">
-                        <!-- 13 Aralık -->
-                        <div class="mb-4">
-                            <div class="text-muted mb-2">13 Aralık Cuma</div>
-                            <div class="workshop-item">
-                                <div class="d-flex">
-                                    <img src="https://placehold.co/80x80" alt="Kış Kahvesi">
-                                    <div class="workshop-info">
-                                        <div class="workshop-title">Kış Kahvesi</div>
-                                        <div class="workshop-time">10:00 - 15:00</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="workshop-item">
-                                <div class="d-flex">
-                                    <img src="https://placehold.co/80x80"" alt="Sushi">
-                                    <div class="workshop-info">
-                                        <div class="workshop-title">Sushi</div>
-                                        <div class="workshop-time">19:00 - 23:00</div>
-                                    </div>
+
+            <div class="accordion" id="accordionWorkshops">
+                <asp:Repeater ID="repeaterMonths" runat="server">
+                    <ItemTemplate>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="heading<%# Container.ItemIndex %>">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapse<%# Container.ItemIndex %>" aria-expanded="false"
+                                    aria-controls="collapse<%# Container.ItemIndex %>">
+                                    <%# Eval("MonthYear") %>
+                                </button>
+                            </h2>
+                            <div id="collapse<%# Container.ItemIndex %>" class="accordion-collapse collapse"
+                                aria-labelledby="heading<%# Container.ItemIndex %>"
+                                data-bs-parent="#accordionWorkshops">
+                                <div class="accordion-body">
+                                    <asp:Repeater ID="repeaterDays" runat="server" DataSource='<%# Eval("Contents") %>'>
+                                        <ItemTemplate>
+                                            <div class="mb-4">
+                                                <div class="text-muted mb-2">
+                                                    <%# Eval("Day") %> <%# Eval("Month") %> <%# Eval("Weekday") %>
+                                                </div>
+                                                <div class="workshop-item">
+                                                    <div class="d-flex">
+                                                        <img src="<%# Eval("ImageUrl") %>" alt="Workshop Image">
+                                                        <div class="workshop-info">
+                                                            <div class="workshop-title"><%# Eval("Title") %></div>
+                                                            <div class="workshop-detail">
+                                                                <p><%# Eval("Details") %></p>
+                                                            </div>
+                                                            <div class="workshop-time">
+                                                                <%# Eval("Price") == DBNull.Value || string.IsNullOrEmpty(Eval("Price").ToString()) 
+                                                                    ? "Bilgi için " + (Eval("ContactInfo") == DBNull.Value ? "" : Eval("ContactInfo")) 
+                                                                    : Eval("Price") %>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </ItemTemplate>
+                                    </asp:Repeater>
                                 </div>
                             </div>
                         </div>
-                        <!-- 14 Aralık -->
-                        <div class="mb-4">
-                            <div class="text-muted mb-2">14 Aralık Cumartesi</div>
-                            <div class="workshop-item">
-                                <div class="d-flex">
-                                    <img src="https://placehold.co/80x80" alt="Yılbaşı Çikolataları">
-                                    <div class="workshop-info">
-                                        <div class="workshop-title">Yılbaşı Çikolataları</div>
-                                        <div class="workshop-time">10:00 - 14:00</div>
+                    </ItemTemplate>
+                </asp:Repeater>
+            </div>
+
+
+
+
+
+
+            <%--<div class="accordion" id="accordionWorkshops">
+                <!-- Aralık 2024 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingDecember">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseDecember" aria-expanded="true" aria-controls="collapseDecember">
+                            Ocak 2025
+                        </button>
+                    </h2>
+                    <div id="collapseDecember" class="accordion-collapse collapse show" aria-labelledby="headingDecember" data-bs-parent="#accordionWorkshops">
+                        <div class="accordion-body">
+                            <!-- 13 Aralık -->
+                            <div class="mb-4">
+
+                                <div class="text-muted mb-2">12 OCAK PAZAR</div>
+                                <div class="workshop-item">
+                                    <div class="d-flex">
+                                        <img src="https://placehold.co/80x80" alt="Kış Kahvesi">
+                                        <div class="workshop-info">
+                                            <div class="workshop-title">ARKEOLOG NEZİH BAŞGELEN İLE ARKEOLOİ MÜZESİ KÜTÜPHANESİ SEMİNERLER_1</div>
+                                            <div class="workshop-detail">
+                                                <p>
+                                                    ARKEOLOG,YAZAR NEZİH BAŞGELEN İLE Türkiye Tarihinde Arkeoloji Tanımından, Eski Mezopotamya Tarihine kadar uzanan Seminerler dizisine başlıyoruz. 
+                                                İstanbul Arkeoloji Müzesinin kütüphanesini siz değerli misafirlerimiz için özel olarak açacaktır.
+                                                </p>
+                                            </div>
+                                            <div class="workshop-time">Bilgi için 0532 783 82 05</div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="workshop-item">
-                                <div class="d-flex">
-                                    <img src="https://placehold.co/80x80" alt="Kokteyl Kahveler">
-                                    <div class="workshop-info">
-                                        <div class="workshop-title">Kokteyl Kahveler</div>
-                                        <div class="workshop-time">10:00 - 15:00</div>
+
+                            <div class="mb-4">
+                                <div class="text-muted mb-2">16 OCAK SALI</div>
+                                <div class="workshop-item">
+                                    <div class="d-flex">
+                                        <img src="https://placehold.co/80x80" alt="Sushi">
+                                        <div class="workshop-info">
+                                            <div class="workshop-title">ÜSTAD HALUK ŞAHİN İLE RAKI ADABI</div>
+                                            <div class="workshop-detail">
+                                                <p>
+                                                    RAKI ERBABI Haluk Şahin eşliğinde Çiçek Pasajına doğru yürürken Beyoğlu’nun eğlence tarihini , tarihi keyif mekanlarını,koltuk meyhanelerini renkli simaların öykülerini dinliyoruz. 
+                                                    Çiçek Pasajında üstadın meyhanesine konuk oluyor, meze aşkını olur ve olmazlarını dinliyor eski rakı sofralarının eşsiz hikayelerini ve anılarını dinliyoruz. 
+                                                </p>
+                                            </div>
+                                            <div class="workshop-time">3500 TL</div>
+                                        </div>
                                     </div>
-                                </div>
-                            </div>
-                            <div class="workshop-item">
-                                <div class="d-flex">
-                                    <img src="https://placehold.co/80x80" alt="Artizan Ekmekler ve Sandviçler">
-                                    <div class="workshop-info">
-                                        <div class="workshop-title">Artizan Ekmekler ve Sandviçler</div>
-                                        <div class="workshop-time">10:00 - 16:00</div>
-                                    </div>
-                                </div>
+                                </div> 
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <!-- Ocak 2025 -->
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="headingJanuary">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseJanuary" aria-expanded="false" aria-controls="collapseJanuary">
-                        Ocak 2025
-                    </button>
-                </h2>
-                <div id="collapseJanuary" class="accordion-collapse collapse" aria-labelledby="headingJanuary" data-bs-parent="#accordionWorkshops">
-                    <div class="accordion-body">
-                        <p>Ocak ayı workshop bilgileri henüz eklenmedi.</p>
+                <!-- Ocak 2025 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingJanuary">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseJanuary" aria-expanded="false" aria-controls="collapseJanuary">
+                            ŞUBAT 2025
+                        </button>
+                    </h2>
+                    <div id="collapseJanuary" class="accordion-collapse collapse" aria-labelledby="headingJanuary" data-bs-parent="#accordionWorkshops">
+                        <div class="accordion-body">
+                            <p>Şubat ayı workshop bilgileri henüz eklenmedi.</p>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </div>--%>
         </div>
-    </div>
     </section>
 
 </asp:Content>

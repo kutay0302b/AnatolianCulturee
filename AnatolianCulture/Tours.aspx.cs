@@ -62,7 +62,7 @@ public partial class _Tours : System.Web.UI.Page
     }
     protected string GetPhotoPath(string photoName)
     {
-        return "/Images/" + photoName;
+        return "Images/" + photoName;
     }
 
 
