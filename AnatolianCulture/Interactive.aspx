@@ -10,7 +10,7 @@
         }
 
         .accordion-button {
-            background-color: #ECEFF1;
+            background-color: #e6e6e6;
             /*color: #29cdcd;
             font-weight: bold;*/
             font-size: 25px;
@@ -24,7 +24,7 @@
             }
 
             .accordion-button:not(.collapsed) {
-                background-color: #ECEFF1;
+                background-color: #e6e6e6;
                 color: #29cdcd;
                 font-size: 25px;
                 border-bottom: none;
@@ -80,21 +80,23 @@
     <section style="height: 111px; background: #0a0a09;"></section>
     <section style="min-height: 100vh;">
         <div class="container my-4">
+            <div class="text-center mb-3">
 
-
+            <h1>Seminer ve Etkinliklerimiz</h1>
+            </div>
 
             <div class="accordion" id="accordionWorkshops">
                 <asp:Repeater ID="repeaterMonths" runat="server">
                     <ItemTemplate>
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="heading<%# Container.ItemIndex %>">
-                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapse<%# Container.ItemIndex %>" aria-expanded="false"
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" 
+                                    data-bs-target="#collapse<%# Container.ItemIndex %>" aria-expanded="true"
                                     aria-controls="collapse<%# Container.ItemIndex %>">
                                     <%# Eval("MonthYear") %>
                                 </button>
                             </h2>
-                            <div id="collapse<%# Container.ItemIndex %>" class="accordion-collapse collapse"
+                            <div id="collapse<%# Container.ItemIndex %>" class="accordion-collapse collapse show" 
                                 aria-labelledby="heading<%# Container.ItemIndex %>"
                                 data-bs-parent="#accordionWorkshops">
                                 <div class="accordion-body">

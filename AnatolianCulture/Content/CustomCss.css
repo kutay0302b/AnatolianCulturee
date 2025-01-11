@@ -183,6 +183,10 @@
         row-gap: 50px;
     }
 
+        .header-search h1 {
+            
+            font-size: 4.1rem;
+        }
     .header-serach-box {
         margin-top: 40px;
         display: flex;
@@ -243,15 +247,15 @@
         display: flex;
         justify-content: center;
         align-content: center;
-        width: 190px;
-        height: 140px;
-        border: 1px solid black;
-        background-color: #ffffff94;
+        width: 180px;
+        height: 180px;
+        /* border: 1px solid black; */
+        background-color: #00000061;
         flex-wrap: wrap;
         flex-direction: column;
         transition: transform 0.3s ease;
         align-items: center;
-        border-radius: 1rem;
+        /* border-radius: 1rem; */
     }
 
         .deneme:hover {
@@ -330,15 +334,15 @@
         display: flex;
         justify-content: center;
         align-content: center;
-        width: 150px;
-        height: 120px;
-        border: 1px solid black;
-        background-color: #ffffff94;
+        width: 180px;
+        height: 180px;
+        /* border: 1px solid black; */
+        background-color: #00000061;
         flex-wrap: wrap;
         flex-direction: column;
         transition: transform 0.3s ease;
         align-items: center;
-        border-radius: 1rem;
+        /* border-radius: 1rem; */
     }
 
         .deneme:hover {

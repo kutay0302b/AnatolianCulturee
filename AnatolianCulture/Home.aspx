@@ -48,6 +48,25 @@
             background-repeat: no-repeat;
             background-size: cover;
         }
+
+
+
+
+
+        @media (max-width: 768px) {
+            .text-overlay h2 {
+                font-size: 40px; 
+            }
+
+            .text-overlay h3 {
+                font-size: 30px; 
+            }
+
+            .text-overlay .btn {
+                font-size: 18px !important;
+                padding: 8px 20px !important;
+            }
+        }
     </style>
 
     <%--header--%>
@@ -58,32 +77,32 @@
 
             <div class="header-search">
                 <div style="display: grid; align-content: space-around; row-gap: 20px;">
-                    <h1 style="font-weight: bold; color: white; font-size: 4.1rem;">Yolculuk Nereye?</h1>
+                    <h1 style="font-weight: bold; color: white">Yolculuk Nereye?</h1>
                     <input class="form-control" id="nameSearch" runat="server" type="search" name="name" value="" style="height: 55px" placeholder="Nereye gitmek istersiniz?" />
                 </div>
                 <div class="header-serach-box">
                     <div class="deneme">
                         <a href="Tours.aspx?child=1">
                             <img src="Images/4.svg" />
-                            <span style="color:white">Çocuk</span>
+                            <span style="color: white">Çocuk</span>
                         </a>
                     </div>
                     <div class="deneme">
                         <a href="Tours.aspx?nature=1">
                             <img src="Images/2.svg" />
-                            <span style="color:white">Doğa</span>
+                            <span style="color: white">Doğa</span>
                         </a>
                     </div>
                     <div class="deneme">
                         <a href="Tours.aspx?cultural=1">
                             <img src="Images/1.svg" />
-                            <span style="color:white">Kültürel</span>
+                            <span style="color: white">Kültürel</span>
                         </a>
                     </div>
                     <div class="deneme">
                         <a href="Tours.aspx?enjoy=1">
                             <img src="Images/3.svg" />
-                            <span style="color:white">Keyif</span>
+                            <span style="color: white">Keyif</span>
                         </a>
                     </div>
                 </div>
@@ -246,8 +265,8 @@
                         <h2>TRAKYA'DA</h2>
                         <h3>BAĞ BOZUMU</h3>
                         <div class="mt-3">
-                            <button class="btn btn-outline-light" style="font-size: 25px; padding: 10px 30px; border: 2px solid white;">
-                                inceleyin</button>
+                            <%--<button class="btn btn-outline-light" style="font-size: 25px; padding: 10px 30px; border: 2px solid white;">
+                                inceleyin</button>--%>
                         </div>
                     </div>
                 </div>
@@ -257,19 +276,19 @@
                         <h2>BÜYÜK ADA'DA</h2>
                         <h3>KÜLTÜR YÜRÜYÜŞÜ</h3>
                         <div class="mt-3">
-                            <button class="btn btn-outline-light" style="font-size: 25px; padding: 10px 30px; border: 2px solid white;">
-                                inceleyin</button>
+                            <%--<button class="btn btn-outline-light" style="font-size: 25px; padding: 10px 30px; border: 2px solid white;">
+                                inceleyin</button>--%>
                         </div>
                     </div>
                 </div>
                 <div class="swiper-slide">
                     <img src="Images/new-slider-3.jpg" />
                     <div class="text-overlay overlay-animation">
-                        <h2>DİĞER ETKİNLİK</h2>
-                        <h3>ÖRNEK BAŞLIK</h3>
+                        <h2>SEMİNERLER</h2>
+                        <h3>VE DAHA FAZLASI</h3>
                         <div class="mt-3">
-                            <button class="btn btn-outline-light" style="font-size: 25px; padding: 10px 30px; border: 2px solid white;">
-                                inceleyin</button>
+                            <%--<button class="btn btn-outline-light" style="font-size: 25px; padding: 10px 30px; border: 2px solid white;">
+                                inceleyin</button>--%>
                         </div>
                     </div>
                 </div>
@@ -394,7 +413,7 @@
         }
 
         function openWp() {
-            const whatsappUrl = "https://wa.me/yourphonenumber?text=Merhaba";
+            const whatsappUrl = "https://wa.me/+905327838205?text=Merhaba";
             window.open(whatsappUrl, '_blank');
         }
 

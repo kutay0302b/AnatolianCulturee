@@ -7,6 +7,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Anatolian Culture - <%: Page.Title %></title>
+    <link rel="icon" type="image/x-icon" href="/images/footer-logo.svg"> 
 
     <%--links--%>
     <link href="Content/bootstrap.min.css" rel="stylesheet" />
@@ -84,7 +85,7 @@
                 <div class="container">
                     <%--<a class="navbar-brand" href="Home.aspx" style="margin-right: 60px;"><span style="color: #81cfcb;">Anatolian</span><span style="color: #fff;">Culture</span></a>--%>
                     <a class="navbar-brand" href="Home.aspx">
-                        <img src="Images//logo-renkli.webp" alt="menu">
+                        <img src="Images/logo-renkli.webp" alt="menu">
                     </a>
                     <button class="navbar-toggler" type="button" data-mdb-toggle="collapse"
                         data-mdb-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
