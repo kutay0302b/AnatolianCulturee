@@ -1,4 +1,4 @@
-﻿using MySql.Data.MySqlClient;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
@@ -16,7 +16,7 @@ public class TourProvider
         using (MySqlConnection conn = new MySqlConnection(Tools.GetConnStr()))
         {
             conn.Open();
-            var cmd = new MySqlCommand("SELECT * FROM anatolianculture.t_tur;", conn);
+            var cmd = new MySqlCommand("SELECT * FROM t_tur;", conn);
             using (var reader = cmd.ExecuteReader())
             {
                 while (reader.Read())
@@ -43,7 +43,7 @@ public class TourProvider
         using (MySqlConnection conn = new MySqlConnection(Tools.GetConnStr()))
         {
             conn.Open();
-            var cmd = new MySqlCommand("SELECT * FROM anatolianculture.t_tur WHERE (MONTH(CURDATE()) < MONTH(TurBasTarih) OR (MONTH(CURDATE()) = MONTH(TurBasTarih) AND DAY(CURDATE()) < DAY(TurBasTarih))) ORDER BY TurBasTarih;\r\n", conn);
+            var cmd = new MySqlCommand("SELECT * FROM t_tur WHERE (MONTH(CURDATE()) < MONTH(TurBasTarih) OR (MONTH(CURDATE()) = MONTH(TurBasTarih) AND DAY(CURDATE()) < DAY(TurBasTarih))) ORDER BY TurBasTarih;\r\n", conn);
             using (var reader = cmd.ExecuteReader())
             {
                 while (reader.Read())
@@ -75,7 +75,7 @@ public class TourProvider
         using (MySqlConnection conn = new MySqlConnection(Tools.GetConnStr()))
         {
             conn.Open();
-            var cmd = new MySqlCommand("SELECT * FROM anatolianculture.t_tur WHERE TurName LIKE @SearchTerm;", conn);
+            var cmd = new MySqlCommand("SELECT * FROM t_tur WHERE TurName LIKE @SearchTerm;", conn);
             cmd.Parameters.AddWithValue("@SearchTerm", "%" + searchTerm + "%");
             using (var reader = cmd.ExecuteReader())
             {

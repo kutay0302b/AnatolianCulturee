@@ -55,11 +55,11 @@
 
         @media (max-width: 768px) {
             .text-overlay h2 {
-                font-size: 40px; 
+                font-size: 40px;
             }
 
             .text-overlay h3 {
-                font-size: 30px; 
+                font-size: 30px;
             }
 
             .text-overlay .btn {
@@ -205,7 +205,7 @@
         </div>
         <div class="container">
             <div class="row">
-                <div class="col-md-3 mb-3">
+                <div class="col-6 col-sm-6 col-md-3 mb-3">
                     <div class="card" data-aos="fade-up">
                         <img src="Images/tur1.webp" class="card-img-top" alt="Yurtiçi Turlar">
                         <h4 class="card-title">Yurtiçi Turlar</h4>
@@ -216,42 +216,42 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3 mb-3">
+                <div class="col-6 col-sm-6 col-md-3 mb-3">
                     <div class="card" data-aos="fade-up">
                         <img src="Images/tur2.webp" class="card-img-top" alt="Yurtdışı Turlar">
                         <h4 class="card-title">Yurtdışı Turlar</h4>
                         <div class="card-overlay">
                             <h4 class="card-title">Yurtdışı Turlar</h4>
-                            <p>DÜnyanın Eşsiz Güzelliklerini Keşfedin</p>
+                            <p>Dünyanın Eşsiz Güzelliklerini Keşfedin</p>
                             <a href="#" class="btn btn-light btn_teal" onclick="redirectToTour(2)">Detaylar</a>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3 mb-3">
+                <div class="col-6 col-sm-6 col-md-3 mb-3">
                     <div class="card" data-aos="fade-up">
                         <img src="Images/tur3.webp" class="card-img-top" alt="İstanbul Turları">
                         <h4 class="card-title">İstanbul Turları</h4>
                         <div class="card-overlay">
                             <h4 class="card-title">İstanbul Turları</h4>
-                            <p>Tüm Dünyanın Dilinde Olan İtanbul'u Köşe Bucak Gezin</p>
+                            <p>Tüm Dünyanın Dilinde Olan İstanbul'u Köşe Bucak Gezin</p>
                             <a href="#" class="btn btn-light btn_teal" onclick="redirectToTour(3)">Detaylar</a>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3 mb-3">
+                <div class="col-6 col-sm-6 col-md-3 mb-3">
                     <div class="card" data-aos="fade-up">
-                        <img src="Images/tur4.webp" class="card-img-top" alt="İnteraktif" style="">
+                        <img src="Images/tur4.webp" class="card-img-top" alt="İnteraktif">
                         <h4 class="card-title">İnteraktif</h4>
                         <div class="card-overlay">
                             <h4 class="card-title">İnteraktif</h4>
                             <p>14 – 17 Kasım Ata Topraklarına Yolculuk: Balkanlara Doğru</p>
-                            <%--<a href="#" class="btn btn-light btn_teal" onclick="redirectToTour(4)">Detaylar</a>--%>
                             <a href="Interactive.aspx" class="btn btn-light btn_teal">Detaylar</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+
     </section>
 
 
