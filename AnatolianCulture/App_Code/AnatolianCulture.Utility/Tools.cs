@@ -11,8 +11,7 @@ public class Tools
     public static string GetConnStr()
     {
         string connString = "";
-        //connString = "***REMOVED***:3306; database=***REMOVED***; ***REMOVED***;***REMOVED***;";
-		 connString = "***REMOVED***;port=3306;database=***REMOVED***;***REMOVED***;***REMOVED***;";
+        
 
          return connString;
     }
