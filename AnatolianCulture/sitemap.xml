@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 	<!-- Ana Sayfa -->
 	<url>
-		<loc>https://www.anatolianculture.com/home</loc>
+		<loc>https://www.anatolianculture.com/home.aspx</loc>
 		<lastmod>2024-11-05</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
@@ -10,7 +10,7 @@
 
 	<!-- Tüm Turlar Sayfası -->
 	<url>
-		<loc>https://www.anatolianculture.com/tours</loc>
+		<loc>https://www.anatolianculture.com/tours.aspx</loc>
 		<lastmod>2024-11-05</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.8</priority>
@@ -18,25 +18,25 @@
 
 	<!-- Özel Tur Türleri -->
 	<url>
-		<loc>https://www.anatolianculture.com/tours?tourtype=1</loc>
+		<loc>https://www.anatolianculture.com/tours.aspx?tourtype=1</loc>
 		<lastmod>2024-11-05</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.8</priority>
 	</url>
 	<url>
-		<loc>https://www.anatolianculture.com/tours?child=1</loc>
+		<loc>https://www.anatolianculture.com/tours.aspx?child=1</loc>
 		<lastmod>2024-11-05</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
-		<loc>https://www.anatolianculture.com/tours?nature=1</loc>
+		<loc>https://www.anatolianculture.com/tours.aspx?nature=1</loc>
 		<lastmod>2024-11-05</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
-		<loc>https://www.anatolianculture.com/tours?cultural=1</loc>
+		<loc>https://www.anatolianculture.com/tours.aspx?cultural=1</loc>
 		<lastmod>2024-11-05</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.7</priority>
@@ -44,13 +44,13 @@
 
 	<!-- Örnek Dinamik Tur Detay Sayfaları -->
 	<url>
-		<loc>https://www.anatolianculture.com/tourdetails?tour=1&amp;type=1</loc>
+		<loc>https://www.anatolianculture.com/tourdetails.aspx?tour=1&amp;type=1</loc>
 		<lastmod>2024-11-05</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
-		<loc>https://www.anatolianculture.com/tourdetails?tour=2&amp;type=1</loc>
+		<loc>https://www.anatolianculture.com/tourdetails.aspx?tour=2&amp;type=1</loc>
 		<lastmod>2024-11-05</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.7</priority>
@@ -58,17 +58,17 @@
 
 	<!-- Hakkımızda Sayfası -->
 	<url>
-		<loc>https://www.anatolianculture.com/about</loc>
+		<loc>https://www.anatolianculture.com/about.aspx</loc>
 		<lastmod>2024-11-05</lastmod>
 		<changefreq>yearly</changefreq>
 		<priority>0.5</priority>
 	</url>
 
 	<!-- İletişim Sayfası -->
-	<url>
+<!--	<url>
 		<loc>https://www.anatolianculture.com/contact</loc>
 		<lastmod>2024-11-05</lastmod>
 		<changefreq>yearly</changefreq>
 		<priority>0.5</priority>
-	</url>
+	</url>-->
 </urlset>

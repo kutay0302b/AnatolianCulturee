@@ -1,4 +1,4 @@
-﻿using MySql.Data.MySqlClient;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,7 +15,7 @@ public class TourContentProvider
         using (MySqlConnection conn = new MySqlConnection(Tools.GetConnStr()))
         {
             conn.Open();
-            var cmd = new MySqlCommand("SELECT * FROM anatolianculture.t_turcontent;", conn);
+            var cmd = new MySqlCommand("SELECT * FROM t_turcontent;", conn);
             using (var reader = cmd.ExecuteReader())
             {
                 while (reader.Read())
@@ -42,7 +42,7 @@ public class TourContentProvider
         using (MySqlConnection conn = new MySqlConnection(Tools.GetConnStr()))
         {
             conn.Open();
-            var cmd = new MySqlCommand("SELECT * FROM anatolianculture.t_turdetails;", conn);
+            var cmd = new MySqlCommand("SELECT * FROM t_turdetails;", conn);
             using (var reader = cmd.ExecuteReader())
             {
                 while (reader.Read())

@@ -44,7 +44,8 @@ public partial class _Tours : System.Web.UI.Page
 
         //    }
         //}
-        if (!IsPostBack)
+      
+  if (!IsPostBack)
         {
             var tours = TourProvider.GetTours();
             int tourType, child, nature, cultural, enjoy;
@@ -58,12 +59,11 @@ public partial class _Tours : System.Web.UI.Page
             );
         }
 
-
     }
-    protected string GetPhotoPath(string photoName)
+  
+  protected string GetPhotoPath(string photoName)
     {
         return "Images/" + photoName;
     }
-
 
 }

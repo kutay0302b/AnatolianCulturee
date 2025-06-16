@@ -7,7 +7,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Anatolian Culture - <%: Page.Title %></title>
-    <link rel="icon" type="image/x-icon" href="/images/footer-logo.svg"> 
+    <link rel="icon" type="image/x-icon" href="/images/footer-logo.svg">
 
     <%--links--%>
     <link href="Content/bootstrap.min.css" rel="stylesheet" />
@@ -90,7 +90,10 @@
                     <button class="navbar-toggler" type="button" data-mdb-toggle="collapse"
                         data-mdb-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                         aria-label="Toggle navigation" style="border-color: white;">
-                        <i class="fa fa-bars"></i>
+                        <i>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
+                            </svg></i>
                     </button>
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav me-auto me-xl-auto" style="margin-left: auto; font-size: 20px; column-gap: 15px">
