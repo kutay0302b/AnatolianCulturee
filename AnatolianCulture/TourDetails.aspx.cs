@@ -26,6 +26,17 @@ public partial class _TourDetails : System.Web.UI.Page
 
                 var tourDetails = TourContentProvider.GetTourDetails();
                 FilteredDetails = tourDetails.FindAll(t => t.TurID == turID && t.TurType == turType);
+                if (FilteredContents != null && FilteredContents.Count > 0)
+                {
+                    rptContents.DataSource = FilteredContents;
+                    rptContents.DataBind();
+                    pnlNoContent.Visible = false;
+                }
+                else
+                {
+                    pnlNoContent.Visible = true;
+                }
+
                 Repeater1.DataSource = FilteredDetails;
                 Repeater1.DataBind();
 

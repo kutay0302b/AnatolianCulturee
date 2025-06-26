@@ -9,9 +9,14 @@ public partial class Admin_Dashboard : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
+        if (Session["isAuthenticated"] == null || !(bool)Session["isAuthenticated"])
+        {
+            Response.Redirect("~/Admin/Login.aspx");
+        }
         if (!IsPostBack)
         {
             LoadTours();
+
         }
     }
 
@@ -22,24 +27,23 @@ public partial class Admin_Dashboard : System.Web.UI.Page
         rptTours.DataBind();
     }
 
-    protected void btnEdit_Click(object sender, EventArgs e)
-    {
-        var btn = (System.Web.UI.WebControls.Button)sender;
-        int tourId = Convert.ToInt32(btn.CommandArgument);
 
-        // TODO: Yönlendirme veya popup ile düzenleme
-        //Response.Redirect("EditTour.aspx?id=" + tourId);
-    }
 
     protected void btnDelete_Click(object sender, EventArgs e)
     {
         var btn = (System.Web.UI.WebControls.Button)sender;
         int tourId = Convert.ToInt32(btn.CommandArgument);
 
-        // TODO: Silme işlemini TourProvider üzerinden uygula
-        // örnek: TourProvider.DeleteTour(tourId);
-
-        // Yeniden listele
-        LoadTours();
+        try
+        {
+            TourProvider.DeleteTour(tourId);
+            LoadTours(); // Yeniden listele
+        }
+        catch (Exception ex)
+        {
+            // Gerekirse logla ya da mesaj göster
+            // örn: lblHata.Text = ex.Message;
+        }
     }
+
 }

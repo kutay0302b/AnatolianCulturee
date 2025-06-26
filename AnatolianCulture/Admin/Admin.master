@@ -50,15 +50,41 @@
             background-color: #f8f9fa;
             padding: 20px;
         }
+
+        .sidebar-link {
+    display: block;
+    padding: 8px 16px;
+    color: white;
+    text-decoration: none;
+    background-color: transparent;
+    border: none;
+    text-align: left;
+    width: 100%;
+    font-weight: 500;
+    transition: background-color 0.2s ease;
+}
+
+.sidebar-link:hover {
+    background-color: #dc3545; /* Kırmızı zemin */
+    color: white;
+    border-radius: 4px;
+}
+
+.logout-link {
+    margin-top: 20px;
+}
+
     </style>
 </head>
 <body>
-    <form id="form1" runat="server">
+    <form id="form1" runat="server" onsubmit="return finalizeContentList();">
         <div class="layout">
             <div class="sidebar">
                 <h4>Yönetim</h4>
                 <a href="Dashboard.aspx">📊 Dashboard</a>
                 <a href="AddTour.aspx">➕ Yeni Tur Ekle</a>
+<asp:LinkButton ID="btnLogout" runat="server" OnClick="btnLogout_Click" CssClass="sidebar-link logout-link">🚪 Çıkış Yap</asp:LinkButton>
+
             </div>
             <div class="main-content">
                 <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server" />

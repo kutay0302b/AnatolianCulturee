@@ -145,33 +145,26 @@
 
                                 <%--<img src="Images/MARDIN-TURU-300x300.webp" class="card-img-top" alt="tur">--%>
                                 <div class="detail-container-main">
-                                    <% if (FilteredContents != null && FilteredContents.Count > 0)
-                                        {
-                                            int dayCount = 1;
-                                            foreach (var content in FilteredContents)
-                                            { %>
-                                    <div class="detail-content">
-                                        <%--   <div style="width: 50%; margin-left: 320px;">--%>
-                                        <div>
-                                            <h6><%= dayCount %>. gün</h6>
-                                            <h6><%= content.TurContentBaslik %></h6>
-                                        </div>
-                                        <%-- <div class="container-fluid" style="width: 50%;">--%>
-                                        <div>
-                                            <p>
-                                                <%= content.TurContent %>
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <% 
-                                                  dayCount++;
-                                              }
-                                          }
-                                          else
-                                          { %>
-                                    <h1>Mevcut tur bulunmamaktadır. Takipte kalın!</h1>
-                                    <% } %>
+                                    <asp:Repeater ID="rptContents" runat="server">
+                                        <itemtemplate>
+                                            <div class="detail-content">
+                                                <div>
+                                                    <h6 style="margin-top: 30px"><%# Container.ItemIndex + 1 %>. gün</h6>
+                                                    <h6><%# Eval("TurContentBaslik") %></h6>
+                                                </div>
+                                                <div>
+                                                    <asp:Literal ID="litHtmlContent" runat="server" Mode="PassThrough"
+                                                        Text='<%# Eval("TurContent") %>' />
+                                                </div>
+                                            </div>
+                                        </itemtemplate>
+                                    </asp:Repeater>
+
+                                    <asp:Panel ID="pnlNoContent" runat="server" Visible="false">
+                                        <h1>Mevcut tur bulunmamaktadır. Takipte kalın!</h1>
+                                    </asp:Panel>
                                 </div>
+
                             </div>
 
                         </div>
@@ -200,13 +193,13 @@
                                     </thead>
                                     <tbody class="table-group-divider" style="color: teal;">
                                         <asp:Repeater ID="Repeater1" runat="server">
-                                            <ItemTemplate>
+                                            <itemtemplate>
                                                 <tr>
                                                     <td><%# Eval("GenelFiyat") %></td>
                                                     <td><%# Eval("TekKisi") %></td>
                                                     <td><%# Eval("CiftKisi") %></td>
                                                 </tr>
-                                            </ItemTemplate>
+                                            </itemtemplate>
                                         </asp:Repeater>
                                     </tbody>
                                 </table>
@@ -231,8 +224,8 @@
                                         <%= service %>
                                     </li>
                                     <%         }
+                                            }
                                         }
-                                    }
                                     %>
                                 </ul>
 
@@ -250,8 +243,8 @@
                                         <%= service %>
                                     </li>
                                     <%         }
+                                            }
                                         }
-                                    }
                                     %>
                                 </ul>
                             </div>

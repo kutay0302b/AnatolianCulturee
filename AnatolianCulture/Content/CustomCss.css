@@ -387,7 +387,7 @@ body {
         flex-direction: column;
         max-width: 100%;
         align-items: flex-start;
-        margin-top: 2rem;
+        /*margin-top: 2rem;*/
     }
 
     .detail-content {
@@ -497,7 +497,7 @@ body {
         flex-direction: column;
         max-width: 100%;
         align-items: flex-start;
-        margin-top: 2rem;
+        /*margin-top: 2rem;*/
     }
 
     .detail-content {
@@ -565,7 +565,7 @@ body {
         flex-direction: column;
         /*max-width: 50%;*/
         align-items: flex-start;
-        margin-top: 2rem;
+        /*margin-top: 2rem;*/
         /*            border: 1px solid gray;
             padding: 15px;
             border-radius: 1rem;
