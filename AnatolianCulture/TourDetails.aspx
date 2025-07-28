@@ -83,7 +83,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            border: 1px solid lightgray;
+            border: 1px solid #33b3a6;
             padding: 20px;
             border-radius: .35rem;
         }

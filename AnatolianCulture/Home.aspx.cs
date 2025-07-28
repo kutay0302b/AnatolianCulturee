@@ -6,22 +6,22 @@ using System.Net;
 using System.ServiceModel.Activities;
 using System.Web.Services;
 using System.Web.UI;
+using System.Linq;
 
 public partial class Home : Page
 {
-  
+
+    protected List<Tour> filteredTourList = new List<Tour>();
 
     protected void Page_Load(object sender, EventArgs e)
     {
-       
 
+        List<Tour> allTours = TourProvider.GetTours(); // varsayılan tüm turları getirir
+        filteredTourList = allTours
+            .Where(t => !string.Equals(t.TurPhoto, "footer-logo.svg", StringComparison.OrdinalIgnoreCase))
+            .ToList();
 
     }
-
-
-
-
-
 
     protected void sendMailBtn_Click(object sender, EventArgs e)
     {
@@ -58,6 +58,13 @@ public partial class Home : Page
         {
         }
     }
+
+
+    protected string GetPhotoPath(string photoName)
+    {
+        return "Images/" + photoName;
+    }
+
 
 }
 

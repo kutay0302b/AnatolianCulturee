@@ -4,6 +4,7 @@
 <%@ Import Namespace="System.Globalization" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 
     <style>
         .deneme a {
@@ -16,6 +17,8 @@
             color: black;
             text-decoration: none;
         }
+
+
 
         .swiper-slide img {
             filter: brightness(0.7);
@@ -36,9 +39,8 @@
             height: 150px;
         }
 
-        .home-photo {
+        /*        .home-photo {
             background-image: url('Images/home-photo-2.png');
-            /*background-image: url('Images/mardin.jpg');*/
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
@@ -47,8 +49,115 @@
             background-position: 0% 0px;
             background-repeat: no-repeat;
             background-size: cover;
+        }*/
+
+        .home-photo {
+            background-image: url('Images/home-photo-2.png');
+            display: -webkit-box; /* Safari için flex alternatifleri */
+            display: -webkit-flex;
+            display: flex;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-flex-wrap: wrap;
+            flex-wrap: wrap;
+            background-attachment: fixed; /* Safari mobil "fixed" desteklemez, fallback olarak "scroll" */
+            position: relative;
+            background-position: 0% 0;
+            background-repeat: no-repeat;
+            background-size: cover;
+            -webkit-background-size: cover; /* Safari için ön ek */
+            background-origin: border-box;
+            -webkit-background-origin: border-box;
         }
 
+
+        .swiper-container-wrapper {
+            position: relative;
+            max-width: 100%;
+        }
+
+        .swiper-card {
+            width: 100%;
+            height: 100%;
+            background: #fff;
+            border-radius: 6px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .swiper-card-inner {
+            position: relative;
+            height: 260px;
+            overflow: hidden;
+        }
+
+        .swiper-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        .swiper-hover {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: white;
+            color: black;
+            padding: 10px;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+            overflow-y: auto;
+            display: grid;
+            justify-items: center;
+            justify-content: center;
+        }
+
+        .swiper-card-inner:hover .swiper-img {
+            opacity: 0;
+        }
+
+        .swiper-card-inner:hover .swiper-hover {
+            opacity: 1;
+        }
+
+
+        .swiper-title {
+            background-color: #33b3a6;
+            color: #fff;
+            font-weight: bold;
+            padding: 6px 10px;
+            font-size: 0.9rem;
+            text-align: center;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+
+
+        .swiper-button-prev,
+        .swiper-button-next {
+            color: #333;
+            font-size: 2rem;
+            top: 50%;
+            transform: translateY(-50%);
+            position: absolute;
+            z-index: 10;
+        }
+
+        .swiper-button-prev {
+            left: -30px;
+        }
+
+        .swiper-button-next {
+            right: -30px;
+        }
 
 
 
@@ -81,25 +190,25 @@
                     <input class="form-control" id="nameSearch" runat="server" type="search" name="name" value="" style="height: 55px" placeholder="Nereye gitmek istersiniz?" />
                 </div>
                 <div class="header-serach-box">
-                    <div class="deneme">
+                    <div class="deneme lila">
                         <a href="Tours.aspx?child=1">
                             <img src="Images/4.svg" />
                             <span style="color: white">Çocuk</span>
                         </a>
                     </div>
-                    <div class="deneme">
+                    <div class="deneme green ">
                         <a href="Tours.aspx?nature=1">
                             <img src="Images/2.svg" />
                             <span style="color: white">Doğa</span>
                         </a>
                     </div>
-                    <div class="deneme">
+                    <div class="deneme lightblue">
                         <a href="Tours.aspx?cultural=1">
                             <img src="Images/1.svg" />
                             <span style="color: white">Kültürel</span>
                         </a>
                     </div>
-                    <div class="deneme">
+                    <div class="deneme orange">
                         <a href="Tours.aspx?enjoy=1">
                             <img src="Images/3.svg" />
                             <span style="color: white">Keyif</span>
@@ -201,6 +310,44 @@
     </section>--%>
     <section class="pt-5 pb-5 card-hover-section">
         <div class="text-center mb-5">
+            <h1>Tur Önizlemesi</h1>
+        </div>
+        <div class="swiper-container-wrapper p-5">
+            <div class="swiper myTourSlider">
+                <div class="swiper-wrapper">
+                    <% foreach (var tour in filteredTourList)
+                        { %>
+                    <div class="swiper-slide">
+                        <a href='TourDetails.aspx?tour=<%= tour.ID %>&type=<%= tour.TurType %>' class="text-decoration-none text-dark">
+                            <div class="swiper-card h-100">
+                                <div class="swiper-card-inner">
+                                    <img src="<%= GetPhotoPath(tour.TurPhoto) %>" class="swiper-img" alt="<%= tour.TurName %>" />
+                                    <div class="swiper-hover">
+                                        <h5><%= tour.TurName %></h5>
+                                        <p><strong>Fiyat:</strong> <%= tour.TurFiyat %></p>
+                                        <p><strong>Başlangıç Tarihi:</strong> <%= tour.TurBasTarih != null ? Convert.ToDateTime(tour.TurBasTarih).ToString("dd/MM/yyyy") : "" %></p>
+                                        <p><strong>Bitiş Tarihi:</strong> <%= tour.TurBitTarih != null ? Convert.ToDateTime(tour.TurBitTarih).ToString("dd/MM/yyyy") : "" %></p>
+                                        <p><strong>Açıklama:</strong> <%= tour.TurAciklama %></p>
+                                    </div>
+                                </div>
+                                <div class="swiper-title">
+                                    <%= tour.TurName.Length > 30 ? tour.TurName.Substring(0, 27) + "..." : tour.TurName %>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <% } %>
+                </div>
+                <div class="swiper-button-prev d-none d-md-flex"></div>
+                <div class="swiper-button-next d-none d-md-flex"></div>
+            </div>
+        </div>
+
+
+
+
+        <%-- <div class="text-center mb-5">
             <h1>Keşif Duraklarımız</h1>
         </div>
         <div class="container">
@@ -250,8 +397,7 @@
                     </div>
                 </div>
             </div>
-        </div>
-
+        </div>--%>
     </section>
 
 
@@ -408,6 +554,26 @@
 
     <script type="text/javascript">
 
+
+        const swipertour = new Swiper('.myTourSlider', {
+            slidesPerView: 1,
+            spaceBetween: 20,
+            breakpoints: {
+                768: { slidesPerView: 2 },
+                992: { slidesPerView: 3 },
+                1200: { slidesPerView: 4 }
+            },
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            }
+        });
+
+
         function redirectToTour(buttonId) {
             window.location.href = "Tours.aspx?tourtype=" + buttonId;
         }
@@ -416,6 +582,12 @@
             const whatsappUrl = "https://wa.me/+905327838205?text=Merhaba";
             window.open(whatsappUrl, '_blank');
         }
+
+        window.addEventListener('scroll', function () {
+            const element = document.querySelector('.home-photo');
+            element.style.backgroundPositionY = -(window.scrollY * 0.5) + 'px';
+        });
+
 
         var swiper = new Swiper('.swiper-container', {
             direction: 'vertical',  // Dikey kaydırma
